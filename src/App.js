@@ -3,14 +3,12 @@ import Card from "./components/mobile/Card";
 function App() {
   return (
     <>
-      <header>
+      <header className="wrapper-header">
         <div className="container">
           <HiroMob />
         </div>
       </header>
-      <main>
-        <Card />
-      </main>
+      <main></main>
     </>
   );
 }

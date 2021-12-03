@@ -1,12 +1,16 @@
 import Logo from "./Logo";
 import Menu from "./Menu";
+import Card from "./Card";
 
 const HiroMob = () => {
   return (
     <div>
       <header>
-        <Logo />
-        <Menu />
+        <div className="wrapper-nav">
+          <Logo />
+          <Menu />
+        </div>
+        {/* <Card /> */}
       </header>
     </div>
   );

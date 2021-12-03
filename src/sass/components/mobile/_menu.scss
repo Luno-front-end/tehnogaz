@@ -1,0 +1,131 @@
+body {
+  position: relative;
+}
+.wrapper-menu {
+  //   &::before {
+  //     content: " ";
+  //     width: 50px;
+  //     height: 50px;
+  //     background: url(../../../img/burgerMenu.svg) 100% 100%;
+  //   }
+}
+.menu-list {
+  width: 100%;
+  height: 100vh;
+  padding: 35px 53px 0 53px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  background-color: $bg-color-menu;
+
+  transform: translate(-50%);
+}
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color-menu-item;
+  height: 43px;
+  border-radius: 6px;
+  min-width: 100px;
+  margin-bottom: 14px;
+  &:nth-child(1) {
+    margin-right: 14px;
+    & .menu-link {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &:nth-child(2) {
+    & .menu-link {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &:nth-child(3) {
+    margin-right: 14px;
+    & .menu-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &:nth-child(4) {
+    min-width: 43px;
+    margin-right: 14px;
+  }
+  &:nth-child(5) {
+    min-width: 43px;
+
+    & .menu-link {
+      position: relative;
+      width: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #202025;
+
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &:nth-child(6) {
+    width: 100%;
+    & .menu-link {
+      display: flex;
+      align-items: center;
+    }
+  }
+  & .menu-link {
+    color: $color-text-menu;
+
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+
+    //   &:nth-child(3) {
+    //     margin-right: 14px;
+    //   }
+    //   &:nth-child(4) {
+    //     min-width: 43px;
+    //     margin-right: 14px;
+    //   }
+    //   &:nth-child(5) {
+    //     min-width: 43px;
+    //   }
+  }
+}
+.arrowLeft {
+  margin-bottom: 6px;
+}
+.arrowDown {
+  margin-left: 30px;
+}
+.location {
+}
+.phone {
+  margin-bottom: 10px;
+}
+.email {
+  //   padding-top: 5px;
+}
+.information {
+  margin-right: 11px;
+}
