@@ -9,6 +9,8 @@ import {
   Phone,
 } from "../Svg";
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import leng from "../../language.json";
 
 const Menu = () => {
   const [activeMenu, setActiveMenu] = useState(false);
@@ -22,6 +24,9 @@ const Menu = () => {
     e.preventDefault();
     setActiveDropdown(!activeDropdown);
   };
+  const onActiveLeng = (e) => {
+    console.log(e.target);
+  };
 
   return (
     <div>
@@ -34,61 +39,72 @@ const Menu = () => {
           <div className="overflow-menu-mob">
             <ul className="menu-list">
               <li className="menu-item">
-                <a href="#" className="menu-link" onClick={onMenuActve}>
+                <NavLink to="/" className="menu-link" onClick={onMenuActve}>
                   <ArrowLeft className="arrowLeft" />
                   Назад
-                </a>
+                </NavLink>
               </li>
               <li
-                className="menu-item"
                 className={
                   activeDropdown ? "menu-item menu-item-active" : "menu-item"
                 }
               >
-                <a href="#" className="menu-link" onClick={onDropdownActive}>
-                  Русский <ArrowDown className="arrowDown" />
-                </a>
-                {activeDropdown && (
-                  <ul className="dropdown-list">
-                    <li className="dropdown-item">
-                      <a href="#" className="dropdown-link">
-                        Українська
-                      </a>
-                    </li>
-                    <li className="dropdown-item">
-                      <a href="#" className="dropdown-link">
-                        English
-                      </a>
-                    </li>
-                  </ul>
-                )}
+                {leng.map(({ ru, en, ua }, i) => (
+                  <div key="leng">
+                    <button
+                      to="/"
+                      className={
+                        activeDropdown
+                          ? "menu-link menu-link-active"
+                          : "menu-link"
+                      }
+                      onClick={onDropdownActive}
+                    >
+                      {ru} <ArrowDown className="arrowDown" />
+                    </button>
+                    {activeDropdown && (
+                      <ul className="dropdown-list" onClick={onActiveLeng}>
+                        <li className="dropdown-item">
+                          <NavLink to="/ua" href="#" className="dropdown-link">
+                            {ua}
+                          </NavLink>
+                        </li>
+                        <li className="dropdown-item">
+                          <NavLink to="/en" className="dropdown-link">
+                            {en}
+                          </NavLink>
+                        </li>
+                      </ul>
+                    )}
+                  </div>
+                ))}
               </li>
               <li
                 className={
                   activeDropdown ? "menu-item menu-itemPosition" : "menu-item"
                 }
               >
-                <a href="#" className="menu-link">
+                <button href="#" className="menu-link">
                   <Location className="location" />
                   Aдрес
-                </a>
+                </button>
               </li>
               <li className="menu-item">
-                <a href="#" className="menu-link">
+                <button href="#" className="menu-link">
                   <Clock />
-                </a>
+                </button>
               </li>
               <li className="menu-item">
-                <a href="#" className="menu-link">
+                <button href="#" className="menu-link">
                   <Phone className="phone" />
                   <Email className="email" />
-                </a>
+                </button>
               </li>
               <li className="menu-item">
-                <a href="#" className="menu-link">
+                <button href="#" className="menu-link">
                   <Information className="information" />
                   Информация о нас
-                </a>
+                </button>
               </li>
             </ul>
           </div>

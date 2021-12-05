@@ -25,13 +25,15 @@ body {
   gap: 14px;
 }
 .menu-item {
-  background-color: $bg-color-menu-item;
   height: 43px;
-  border-radius: 6px;
 
   & .menu-link {
     width: 100%;
     height: 100%;
+    background-color: $bg-color-menu-item;
+    border: none;
+    outline: none;
+    border-radius: 6px;
   }
   &:nth-child(1) {
     grid-column-start: 1;
@@ -51,6 +53,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 14px 0 14px 0;
     }
   }
   &:nth-child(3) {
@@ -113,9 +116,11 @@ body {
     line-height: 14px;
   }
 }
+.menu-link-active {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
 .menu-item-active {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   margin-bottom: 84px;
 }
 .menu-itemPosition {
@@ -167,6 +172,7 @@ body {
     transform: translate(-50%);
   }
 }
+
 .arrowLeft {
   margin-bottom: 6px;
 }
