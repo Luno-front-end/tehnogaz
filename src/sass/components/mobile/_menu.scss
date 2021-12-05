@@ -1,76 +1,85 @@
 body {
   position: relative;
 }
-.wrapper-menu {
-  //   &::before {
-  //     content: " ";
-  //     width: 50px;
-  //     height: 50px;
-  //     background: url(../../../img/burgerMenu.svg) 100% 100%;
-  //   }
-}
-.menu-list {
+// .wrapper-menu-mob {
+
+// }
+
+.overflow-menu-mob {
   width: 100%;
   height: 100vh;
-  padding: 35px 53px 0 53px;
+  background-color: $bg-color-menu;
 
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  padding: 35px 53px 0 53px;
 
   position: absolute;
   top: 0;
   left: 50%;
 
-  background-color: $bg-color-menu;
-
   transform: translate(-50%);
 }
+.menu-list {
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: repeat(3, 1fr);
+  gap: 14px;
+}
 .menu-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: $bg-color-menu-item;
   height: 43px;
   border-radius: 6px;
-  min-width: 100px;
-  margin-bottom: 14px;
+
+  & .menu-link {
+    width: 100%;
+    height: 100%;
+  }
   &:nth-child(1) {
-    margin-right: 14px;
+    grid-column-start: 1;
+    grid-column-end: 3;
     & .menu-link {
-      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
   }
   &:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    position: relative;
     & .menu-link {
       display: flex;
       align-items: center;
+      justify-content: center;
     }
   }
   &:nth-child(3) {
-    margin-right: 14px;
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
     & .menu-link {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
   }
   &:nth-child(4) {
-    min-width: 43px;
-    margin-right: 14px;
+    & .menu-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &:nth-child(5) {
-    min-width: 43px;
-
     & .menu-link {
       position: relative;
-      width: 100%;
       display: inline-flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+
       &::before {
         content: " ";
         position: absolute;
@@ -79,19 +88,22 @@ body {
         display: block;
         width: 100%;
         height: 1px;
-        background-color: #202025;
+        background-color: $color-hr-menu;
 
         transform: translate(-50%, -50%);
       }
     }
   }
   &:nth-child(6) {
-    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
     & .menu-link {
       display: flex;
       align-items: center;
+      justify-content: center;
     }
   }
+
   & .menu-link {
     color: $color-text-menu;
 
@@ -99,33 +111,81 @@ body {
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
+  }
+}
+.menu-item-active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 84px;
+}
+.menu-itemPosition {
+  margin-top: -84px;
+}
 
-    //   &:nth-child(3) {
-    //     margin-right: 14px;
-    //   }
-    //   &:nth-child(4) {
-    //     min-width: 43px;
-    //     margin-right: 14px;
-    //   }
-    //   &:nth-child(5) {
-    //     min-width: 43px;
-    //   }
+.dropdown-list {
+  position: relative;
+  z-index: 999;
+}
+.dropdown-item {
+  background-color: $bg-color-menu-item;
+
+  &:nth-child(2) {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+.dropdown-link {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  color: $color-text-menu;
+
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+
+    width: 85%;
+    height: 1px;
+    background-color: $standart-color-black;
+
+    transform: translate(-50%);
   }
 }
 .arrowLeft {
   margin-bottom: 6px;
 }
 .arrowDown {
-  margin-left: 30px;
+  position: absolute;
+  top: 21px;
+  right: 15px;
 }
-.location {
-}
+// .location {
+// }
 .phone {
   margin-bottom: 10px;
 }
-.email {
-  //   padding-top: 5px;
-}
+// .email {
+// }
 .information {
   margin-right: 11px;
+}
+.burgerimg {
+  width: 20px;
+  height: 20px;
 }

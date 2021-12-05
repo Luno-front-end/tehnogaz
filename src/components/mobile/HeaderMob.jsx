@@ -10,7 +10,7 @@ const HiroMob = () => {
           <Logo />
           <Menu />
         </div>
-        {/* <Card /> */}
+        <Card />
       </header>
     </div>
   );

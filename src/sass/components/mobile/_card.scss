@@ -1,0 +1,62 @@
+.mobile-card-list {
+  margin-top: 29px;
+}
+.mobile-card-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
+
+  padding: 19px 18px 19px 30px;
+  border: 1px solid $standart-color-white;
+
+  & div {
+    display: flex;
+    align-items: center;
+  }
+  &:nth-child(2) {
+    & .value-card {
+      line-height: 2px;
+      display: flex;
+      flex-direction: column;
+      & .plus-card {
+        margin-left: 14px;
+      }
+      & .sub-val-card {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+.header-card {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 22px;
+  color: $standart-color-white;
+}
+.value-card {
+  font-family: "Yesteryear", cursive;
+
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+
+  color: $color-text-card;
+  -webkit-text-stroke: 1px $color-border-text-card;
+}
+.number-card {
+  font-size: 8px;
+  line-height: 12px;
+}
+.plus-card {
+  font-size: 14px;
+  line-height: 21px;
+
+  color: $standart-color-white;
+}
+.arrow-right {
+  margin-left: 40px;
+}

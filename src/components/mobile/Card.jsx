@@ -1,12 +1,22 @@
-import logo from "../../img/LogoMob.png";
+import { ArrowRight } from "../Svg";
+// import imgTwoCard from "../../img/imgOneCard.png";
+// import imgThreeCard from "../../img/imgOneCard.png";
+// import imgFourCard from "../../img/imgOneCard.png";
+// import imgFiveCard from "../../img/imgOneCard.png";
+
 const HeaderMob = () => {
   return (
-    <div>
-      <div>
-        <ul>
-          <li>
-            Углекислота
-            <div>
+    <ul className="mobile-card-list">
+      <li className="mobile-card-item">
+        <h2 className="header-card">Углекислота</h2>
+        <div>
+          <p className="value-card">
+            CO<span className="number-card">2</span>
+          </p>
+          <ArrowRight className="arrow-right" />
+        </div>
+        {/* <img src={imgOneCard} alt="" /> */}
+        {/* <div>
               <div>
                 <p>
                   40/10 л<span>Емкость</span>
@@ -16,7 +26,6 @@ const HeaderMob = () => {
                 </p>
               </div>
               <div>
-                {/* <img src="" alt="" /> */}
                 <h2>УГЛЕКИСЛОТА (БАЛЛОН)</h2>
                 <div>
                   <p>Заказ только по телефону</p>
@@ -32,11 +41,22 @@ const HeaderMob = () => {
                   <p>Нажмите для описания</p>
                 </ul>
               </div>
-            </div>
-          </li>
-          <li>
-            Смесь МИКС-1
-            <div>
+            </div> */}
+      </li>
+      <li className="mobile-card-item">
+        <h2 className="header-card">Смесь МИКС-1</h2>
+        <div>
+          <p className="value-card">
+            Ar <span className="plus-card">+</span>
+            <span className="sub-val-card">
+              CO
+              <span className="number-card">2</span>
+            </span>
+          </p>
+          <ArrowRight className="arrow-right" />
+        </div>
+        {/* <img src={imgOneCard} alt="" /> */}
+        {/* <div>
               <div>
                 <p>
                   40 л<span>Емкость</span>
@@ -46,7 +66,6 @@ const HeaderMob = () => {
                 </p>
               </div>
               <div>
-                {/* <img src="" alt="" /> */}
                 <h2>Смесь МИКС-1 (БАЛЛОН)</h2>
                 <div>
                   <p>Заказ только по телефону</p>
@@ -62,11 +81,15 @@ const HeaderMob = () => {
                   <p>Нажмите для описания</p>
                 </ul>
               </div>
-            </div>
-          </li>
-          <li>
-            Аргон
-            <div>
+            </div> */}
+      </li>
+      <li className="mobile-card-item">
+        <h2 className="header-card">Аргон</h2>
+        <div>
+          <p className="value-card">Ar</p>
+          <ArrowRight className="arrow-right" />
+        </div>
+        {/* <div>
               <div>
                 <p>
                   40 л<span>Емкость</span>
@@ -76,7 +99,6 @@ const HeaderMob = () => {
                 </p>
               </div>
               <div>
-                {/* <img src="" alt="" /> */}
                 <h2>Аргон (БАЛЛОН)</h2>
                 <div>
                   <p>Заказ только по телефону</p>
@@ -92,11 +114,17 @@ const HeaderMob = () => {
                   <p>Нажмите для описания</p>
                 </ul>
               </div>
-            </div>
-          </li>
-          <li>
-            Азот
-            <div>
+            </div> */}
+      </li>
+      <li className="mobile-card-item">
+        <h2 className="header-card">Азот</h2>
+        <div>
+          <p className="value-card">
+            N<span className="number-card">2</span>
+          </p>
+          <ArrowRight className="arrow-right" />
+        </div>
+        {/* <div>
               <div>
                 <p>
                   40 л<span>Емкость</span>
@@ -106,7 +134,6 @@ const HeaderMob = () => {
                 </p>
               </div>
               <div>
-                {/* <img src="" alt="" /> */}
                 <h2>Азот (БАЛЛОН)</h2>
                 <div>
                   <p>Заказ только по телефону</p>
@@ -122,11 +149,17 @@ const HeaderMob = () => {
                   <p>Нажмите для описания</p>
                 </ul>
               </div>
-            </div>
-          </li>
-          <li>
-            Кислород
-            <div>
+            </div> */}
+      </li>
+      <li className="mobile-card-item">
+        <h2 className="header-card">Кислород</h2>
+        <div>
+          <p className="value-card">
+            O<span className="number-card">2</span>
+          </p>
+          <ArrowRight className="arrow-right" />
+        </div>
+        {/* <div>
               <div>
                 <p>
                   40 л <span>Емкость</span>
@@ -136,7 +169,6 @@ const HeaderMob = () => {
                 </p>
               </div>
               <div>
-                {/* <img src="" alt="" /> */}
                 <h2>Кислород (БАЛЛОН)</h2>
                 <div>
                   <p>Заказ только по телефону</p>
@@ -152,11 +184,9 @@ const HeaderMob = () => {
                   <p>Нажмите для описания</p>
                 </ul>
               </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+            </div> */}
+      </li>
+    </ul>
   );
 };
 

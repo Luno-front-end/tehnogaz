@@ -105,6 +105,23 @@ export const ArrowDown = ({ className }) => {
     </svg>
   );
 };
+export const ArrowRight = ({ className }) => {
+  return (
+    <svg
+      width="5"
+      height="10"
+      viewBox="0 0 5 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M0.728374 10L4.84915 5.40601C5.05028 5.18178 5.05028 4.81822 4.84915 4.59399L0.728374 0H0.5L0 0.5V0.811887L3.75659 5L0 9.18811V9.5L0.5 10H0.728374Z"
+        fill="white"
+      />
+    </svg>
+  );
+};
 export const Location = ({ className }) => {
   return (
     <svg
