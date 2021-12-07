@@ -1,9 +1,9 @@
 .wrapper-header {
   padding-top: 18px;
-  height: 100vh;
+  height: 100%;
   background-image: linear-gradient(to top, $bg-second-color, $bg-second-color),
     url(../../../img/bg_mob.jpg);
-  background-blend-mode: normal;
+  // background-blend-mode: normal;
   background-repeat: no-repeat;
   background-size: cover;
 }

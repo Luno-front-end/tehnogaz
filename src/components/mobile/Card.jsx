@@ -1,192 +1,346 @@
 import { ArrowRight } from "../Svg";
-// import imgTwoCard from "../../img/imgOneCard.png";
-// import imgThreeCard from "../../img/imgOneCard.png";
-// import imgFourCard from "../../img/imgOneCard.png";
-// import imgFiveCard from "../../img/imgOneCard.png";
+import cylindersOne from "../../img/cylindersOne.png";
+import cylindersTwo from "../../img/cylindersTwo.png";
+import cylindersThree from "../../img/cylindersThree.png";
+import cylindersFour from "../../img/cylindersFour.png";
+import cylindersFive from "../../img/cylindersFive.png";
+import { useState } from "react";
 
 const HeaderMob = () => {
+  const [activeCard, setActiveCard] = useState(false);
+
+  const onOpenCard = (e) => {
+    const li = e.target.closest("li");
+    if (li === null) return;
+    
+    // if (activeCard) {
+    //   return;
+    // }
+    console.log(e);
+    setActiveCard(!activeCard);
+  };
+
   return (
-    <ul className="mobile-card-list">
-      <li className="mobile-card-item">
-        <h2 className="header-card">Углекислота</h2>
-        <div>
-          <p className="value-card">
-            CO<span className="number-card">2</span>
-          </p>
-          <ArrowRight className="arrow-right" />
-        </div>
-        {/* <img src={imgOneCard} alt="" /> */}
-        {/* <div>
+    <>
+      <ul className="mobile-card-list" onClick={onOpenCard}>
+        <li
+          className={
+            activeCard ? "mobile-card-item active-card" : "mobile-card-item "
+          }
+          data-comand="oneCard"
+        >
+          <div className="firs-info-card">
+            <div>
+              <h2 className="header-card">Углекислота</h2>
+            </div>
+            <div className="head-box">
+              <p className="value-card">
+                CO<span className="number-card">2</span>
+              </p>
+              <ArrowRight className="arrow-right" />
+            </div>
+          </div>
+          {activeCard && (
+            <div className="wrapper-card">
+              <img src={cylindersOne} alt="" className="cylinders-card" />
+              <ul className="value-position-list">
+                <li className="value-position-item">
+                  <p className="value-position">
+                    40/10 л<span className="designation-position">Емкость</span>
+                  </p>
+                </li>
+                <li className="value-position-item">
+                  <p className="value-position">
+                    85/21~ кг
+                    <span className="designation-position">Вес баллона</span>
+                  </p>
+                </li>
+              </ul>
+
               <div>
-                <p>
-                  40/10 л<span>Емкость</span>
-                </p>
-                <p>
-                  20/6 кг<span>Вес баллона</span>
-                </p>
-              </div>
-              <div>
-                <h2>УГЛЕКИСЛОТА (БАЛЛОН)</h2>
-                <div>
-                  <p>Заказ только по телефону</p>
-                  <p>₴300 / 100</p>
+                <h2 className="position-name">УГЛЕКИСЛОТА (БАЛЛОН)</h2>
+                <div className="wrapper-info-position">
+                  <p className="info-contacts-position">
+                    Заказ только <br /> по телефону
+                  </p>
+                  <p className="price-position">₴300 / 100</p>
                 </div>
-                <ul>
-                  <li>
-                    <a href="tel:0978180966">+38 (097) 818-09-66</a>
+                <ul className="wrapper-contact-position_list">
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0978180966" className="link-position">
+                      +38 (097) 818-09-66
+                    </a>
                   </li>
-                  <li>
-                    <a href="tel:0953614833">+38 (095) 361-48-33</a>
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0953614833" className="link-position">
+                      +38 (095) 361-48-33
+                    </a>
                   </li>
-                  <p>Нажмите для описания</p>
                 </ul>
-              </div>
-            </div> */}
-      </li>
-      <li className="mobile-card-item">
-        <h2 className="header-card">Смесь МИКС-1</h2>
-        <div>
-          <p className="value-card">
-            Ar <span className="plus-card">+</span>
-            <span className="sub-val-card">
-              CO
-              <span className="number-card">2</span>
-            </span>
-          </p>
-          <ArrowRight className="arrow-right" />
-        </div>
-        {/* <img src={imgOneCard} alt="" /> */}
-        {/* <div>
-              <div>
-                <p>
-                  40 л<span>Емкость</span>
-                </p>
-                <p>
-                  65-77 кг<span>Вес баллона</span>
-                </p>
-              </div>
-              <div>
-                <h2>Смесь МИКС-1 (БАЛЛОН)</h2>
-                <div>
-                  <p>Заказ только по телефону</p>
-                  <p>₴290</p>
+                <div className="container-btn-info">
+                  <button className="btn-info-position">
+                    Нажмите для описания
+                  </button>
                 </div>
-                <ul>
-                  <li>
-                    <a href="tel:0978180966">+38 (097) 818-09-66</a>
-                  </li>
-                  <li>
-                    <a href="tel:0953614833">+38 (095) 361-48-33</a>
-                  </li>
-                  <p>Нажмите для описания</p>
-                </ul>
               </div>
-            </div> */}
-      </li>
-      <li className="mobile-card-item">
-        <h2 className="header-card">Аргон</h2>
-        <div>
-          <p className="value-card">Ar</p>
-          <ArrowRight className="arrow-right" />
-        </div>
-        {/* <div>
+            </div>
+          )}
+        </li>
+        <li
+          className={
+            activeCard ? "mobile-card-item active-card" : "mobile-card-item "
+          }
+          data-comand="twoCard"
+        >
+          <div className="firs-info-card">
+            <div>
+              <h2 className="header-card">Углекислота</h2>
+            </div>
+            <div className="head-box">
+              <p className="value-card">
+                CO<span className="number-card">2</span>
+              </p>
+              <ArrowRight className="arrow-right" />
+            </div>
+          </div>
+          {activeCard && (
+            <div className="wrapper-card">
+              <img src={cylindersOne} alt="" className="cylinders-card" />
+              <ul className="value-position-list">
+                <li className="value-position-item">
+                  <p className="value-position">
+                    40/10 л<span className="designation-position">Емкость</span>
+                  </p>
+                </li>
+                <li className="value-position-item">
+                  <p className="value-position">
+                    85/21~ кг
+                    <span className="designation-position">Вес баллона</span>
+                  </p>
+                </li>
+              </ul>
+
               <div>
-                <p>
-                  40 л<span>Емкость</span>
-                </p>
-                <p>
-                  65-77 кг<span>Вес баллона</span>
-                </p>
-              </div>
-              <div>
-                <h2>Аргон (БАЛЛОН)</h2>
-                <div>
-                  <p>Заказ только по телефону</p>
-                  <p>₴280</p>
+                <h2 className="position-name">УГЛЕКИСЛОТА (БАЛЛОН)</h2>
+                <div className="wrapper-info-position">
+                  <p className="info-contacts-position">
+                    Заказ только <br /> по телефону
+                  </p>
+                  <p className="price-position">₴300 / 100</p>
                 </div>
-                <ul>
-                  <li>
-                    <a href="tel:0978180966">+38 (097) 818-09-66</a>
+                <ul className="wrapper-contact-position_list">
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0978180966" className="link-position">
+                      +38 (097) 818-09-66
+                    </a>
                   </li>
-                  <li>
-                    <a href="tel:0953614833">+38 (095) 361-48-33</a>
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0953614833" className="link-position">
+                      +38 (095) 361-48-33
+                    </a>
                   </li>
-                  <p>Нажмите для описания</p>
                 </ul>
-              </div>
-            </div> */}
-      </li>
-      <li className="mobile-card-item">
-        <h2 className="header-card">Азот</h2>
-        <div>
-          <p className="value-card">
-            N<span className="number-card">2</span>
-          </p>
-          <ArrowRight className="arrow-right" />
-        </div>
-        {/* <div>
-              <div>
-                <p>
-                  40 л<span>Емкость</span>
-                </p>
-                <p>
-                  51-59 кг<span>Вес баллона</span>
-                </p>
-              </div>
-              <div>
-                <h2>Азот (БАЛЛОН)</h2>
-                <div>
-                  <p>Заказ только по телефону</p>
-                  <p>₴160</p>
+                <div className="container-btn-info">
+                  <button className="btn-info-position">
+                    Нажмите для описания
+                  </button>
                 </div>
-                <ul>
-                  <li>
-                    <a href="tel:0978180966">+38 (097) 818-09-66</a>
-                  </li>
-                  <li>
-                    <a href="tel:0953614833">+38 (095) 361-48-33</a>
-                  </li>
-                  <p>Нажмите для описания</p>
-                </ul>
               </div>
-            </div> */}
-      </li>
-      <li className="mobile-card-item">
-        <h2 className="header-card">Кислород</h2>
-        <div>
-          <p className="value-card">
-            O<span className="number-card">2</span>
-          </p>
-          <ArrowRight className="arrow-right" />
-        </div>
-        {/* <div>
+            </div>
+          )}
+        </li>
+        <li
+          className={
+            activeCard ? "mobile-card-item active-card" : "mobile-card-item "
+          }
+          data-comand="ThreeCard"
+        >
+          <div className="firs-info-card">
+            <div>
+              <h2 className="header-card">Углекислота</h2>
+            </div>
+            <div className="head-box">
+              <p className="value-card">
+                CO<span className="number-card">2</span>
+              </p>
+              <ArrowRight className="arrow-right" />
+            </div>
+          </div>
+          {activeCard && (
+            <div className="wrapper-card">
+              <img src={cylindersOne} alt="" className="cylinders-card" />
+              <ul className="value-position-list">
+                <li className="value-position-item">
+                  <p className="value-position">
+                    40/10 л<span className="designation-position">Емкость</span>
+                  </p>
+                </li>
+                <li className="value-position-item">
+                  <p className="value-position">
+                    85/21~ кг
+                    <span className="designation-position">Вес баллона</span>
+                  </p>
+                </li>
+              </ul>
+
               <div>
-                <p>
-                  40 л <span>Емкость</span>
-                </p>
-                <p>
-                  67 кг <span>Вес баллона</span>
-                </p>
-              </div>
-              <div>
-                <h2>Кислород (БАЛЛОН)</h2>
-                <div>
-                  <p>Заказ только по телефону</p>
-                  <p>₴96</p>
+                <h2 className="position-name">УГЛЕКИСЛОТА (БАЛЛОН)</h2>
+                <div className="wrapper-info-position">
+                  <p className="info-contacts-position">
+                    Заказ только <br /> по телефону
+                  </p>
+                  <p className="price-position">₴300 / 100</p>
                 </div>
-                <ul>
-                  <li>
-                    <a href="tel:0978180966">+38 (097) 818-09-66</a>
+                <ul className="wrapper-contact-position_list">
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0978180966" className="link-position">
+                      +38 (097) 818-09-66
+                    </a>
                   </li>
-                  <li>
-                    <a href="tel:0953614833">+38 (095) 361-48-33</a>
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0953614833" className="link-position">
+                      +38 (095) 361-48-33
+                    </a>
                   </li>
-                  <p>Нажмите для описания</p>
                 </ul>
+                <div className="container-btn-info">
+                  <button className="btn-info-position">
+                    Нажмите для описания
+                  </button>
+                </div>
               </div>
-            </div> */}
-      </li>
-    </ul>
+            </div>
+          )}
+        </li>
+        <li
+          className={
+            activeCard ? "mobile-card-item active-card" : "mobile-card-item "
+          }
+          data-comand="fourCard"
+        >
+          <div className="firs-info-card">
+            <div>
+              <h2 className="header-card">Углекислота</h2>
+            </div>
+            <div className="head-box">
+              <p className="value-card">
+                CO<span className="number-card">2</span>
+              </p>
+              <ArrowRight className="arrow-right" />
+            </div>
+          </div>
+          {activeCard && (
+            <div className="wrapper-card">
+              <img src={cylindersOne} alt="" className="cylinders-card" />
+              <ul className="value-position-list">
+                <li className="value-position-item">
+                  <p className="value-position">
+                    40/10 л<span className="designation-position">Емкость</span>
+                  </p>
+                </li>
+                <li className="value-position-item">
+                  <p className="value-position">
+                    85/21~ кг
+                    <span className="designation-position">Вес баллона</span>
+                  </p>
+                </li>
+              </ul>
+
+              <div>
+                <h2 className="position-name">УГЛЕКИСЛОТА (БАЛЛОН)</h2>
+                <div className="wrapper-info-position">
+                  <p className="info-contacts-position">
+                    Заказ только <br /> по телефону
+                  </p>
+                  <p className="price-position">₴300 / 100</p>
+                </div>
+                <ul className="wrapper-contact-position_list">
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0978180966" className="link-position">
+                      +38 (097) 818-09-66
+                    </a>
+                  </li>
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0953614833" className="link-position">
+                      +38 (095) 361-48-33
+                    </a>
+                  </li>
+                </ul>
+                <div className="container-btn-info">
+                  <button className="btn-info-position">
+                    Нажмите для описания
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </li>
+        <li
+          className={
+            activeCard ? "mobile-card-item active-card" : "mobile-card-item "
+          }
+          data-comand="fiveCard"
+        >
+          <div className="firs-info-card">
+            <div>
+              <h2 className="header-card">Углекислота</h2>
+            </div>
+            <div className="head-box">
+              <p className="value-card">
+                CO<span className="number-card">2</span>
+              </p>
+              <ArrowRight className="arrow-right" />
+            </div>
+          </div>
+          {activeCard && (
+            <div className="wrapper-card">
+              <img src={cylindersOne} alt="" className="cylinders-card" />
+              <ul className="value-position-list">
+                <li className="value-position-item">
+                  <p className="value-position">
+                    40/10 л<span className="designation-position">Емкость</span>
+                  </p>
+                </li>
+                <li className="value-position-item">
+                  <p className="value-position">
+                    85/21~ кг
+                    <span className="designation-position">Вес баллона</span>
+                  </p>
+                </li>
+              </ul>
+
+              <div>
+                <h2 className="position-name">УГЛЕКИСЛОТА (БАЛЛОН)</h2>
+                <div className="wrapper-info-position">
+                  <p className="info-contacts-position">
+                    Заказ только <br /> по телефону
+                  </p>
+                  <p className="price-position">₴300 / 100</p>
+                </div>
+                <ul className="wrapper-contact-position_list">
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0978180966" className="link-position">
+                      +38 (097) 818-09-66
+                    </a>
+                  </li>
+                  <li className="wrapper-contact-item">
+                    <a href="tel:0953614833" className="link-position">
+                      +38 (095) 361-48-33
+                    </a>
+                  </li>
+                </ul>
+                <div className="container-btn-info">
+                  <button className="btn-info-position">
+                    Нажмите для описания
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </li>
+      </ul>
+      <div className="modal-info-position"></div>
+    </>
   );
 };
 
