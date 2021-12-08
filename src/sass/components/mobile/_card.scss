@@ -4,6 +4,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  // overflow-y: scroll;
+  // &::-webkit-scrollbar {
+  //   width: 0;
+  // }
 }
 .mobile-card-item {
   position: relative;
@@ -45,7 +49,11 @@
 }
 .active-card {
   border: none !important;
+&:not(:last-child){
   margin-bottom: 128px;
+
+}
+
 }
 .cylinders-card {
   position: absolute;
@@ -82,10 +90,10 @@
 }
 .wrapper-card {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   font-family: Montserrat;
 
   padding: 28px 13px 4px 20px;
@@ -115,6 +123,8 @@
   pointer-events: none;
 }
 .wrapper-card_active {
+  top:0; 
+  bottom: auto;
   opacity: 1;
   pointer-events: painted;
 }

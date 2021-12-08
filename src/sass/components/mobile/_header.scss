@@ -1,5 +1,5 @@
 .wrapper-header {
-  padding-top: 18px;
+  // padding-top: 18px;
   // height: 100%;
   background-image: linear-gradient(to top, $bg-second-color, $bg-second-color),
     url(../../../img/bg_mob.jpg);
@@ -7,9 +7,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  // overflow: hidden;
+  height: 100vh;
 }
 //
 .wrapper-nav {
+  padding-top: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;

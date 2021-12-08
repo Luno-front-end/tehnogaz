@@ -10,7 +10,7 @@ const HeaderMob = () => {
   const onOpenCard = (e) => {
     const activeLi = document.querySelectorAll(".mobile-card-item");
     const activeCard = document.querySelectorAll(".wrapper-card_active");
-    e.preventDefault();
+    // e.preventDefault();
 
     const li = e.target.closest("li");
 
