@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import Menu from "./Menu";
-import Card from "./Card";
+import Card from "./Card/Card";
 
 const HiroMob = () => {
   return (

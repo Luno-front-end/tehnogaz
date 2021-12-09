@@ -1,24 +1,28 @@
-import { ArrowRight } from "../Svg";
-import cylindersOne from "../../img/cylindersOne.png";
-import cylindersTwo from "../../img/cylindersTwo.png";
-import cylindersThree from "../../img/cylindersThree.png";
-import cylindersFour from "../../img/cylindersFour.png";
-import cylindersFive from "../../img/cylindersFive.png";
+import { ArrowRight } from "../../Svg";
+import cylindersOne from "../../../img/cylindersOne.png";
+import cylindersTwo from "../../../img/cylindersTwo.png";
+import cylindersThree from "../../../img/cylindersThree.png";
+import cylindersFour from "../../../img/cylindersFour.png";
+import cylindersFive from "../../../img/cylindersFive.png";
+
+import CardPopUp from "./CardPopUp";
 import { useState } from "react";
 
-const HeaderMob = () => {
+const Card = () => {
+  const [activePopup, setActivePopup] = useState(false);
+  const [indPopup, setIndPopup] = useState(null);
+
   const onOpenCard = (e) => {
+    // console.log(typeof e.target.id);
+
     const activeLi = document.querySelectorAll(".mobile-card-item");
     const activeCard = document.querySelectorAll(".wrapper-card_active");
-    // e.preventDefault();
 
     const li = e.target.closest("li");
 
     if (li === null) return;
     console.log(li.classList.value);
-    if (li.classList.value !== "mobile-card-item") {
-      return;
-    }
+    if (li.classList.value !== "mobile-card-item") return;
 
     activeLi.forEach((_li, i) => {
       activeLi[i].classList.remove("active-card");
@@ -29,12 +33,20 @@ const HeaderMob = () => {
 
     e.target.classList.add("active-card");
     e.target.children[1].classList.add("wrapper-card_active");
+    if (e.target.id === "undefined") {
+      console.log("object");
+      return;
+    }
+    setIndPopup(e.target.id);
+  };
+  const onActivePopUp = () => {
+    setActivePopup(!activePopup);
   };
 
   return (
     <>
       <ul className="mobile-card-list">
-        <li className="mobile-card-item" onClick={onOpenCard}>
+        <li className="mobile-card-item" onClick={onOpenCard} id="0">
           <div className="firs-info-card">
             <div>
               <h2 className="header-card">Углекислота</h2>
@@ -46,7 +58,7 @@ const HeaderMob = () => {
               <ArrowRight className="arrow-right" />
             </div>
           </div>
-          <div className="wrapper-card">
+          <div className="wrapper-card" onClick={onActivePopUp}>
             <img src={cylindersOne} alt="" className="cylinders-card" />
             <ul className="value-position-list">
               <li className="value-position-item">
@@ -90,7 +102,7 @@ const HeaderMob = () => {
             </div>
           </div>
         </li>
-        <li className="mobile-card-item" onClick={onOpenCard}>
+        <li className="mobile-card-item" onClick={onOpenCard} id="1">
           <div className="firs-info-card">
             <div>
               <h2 className="header-card">Смесь МИКС-1</h2>
@@ -103,7 +115,7 @@ const HeaderMob = () => {
             </div>
           </div>
 
-          <div className="wrapper-card">
+          <div className="wrapper-card" onClick={onActivePopUp}>
             <img src={cylindersTwo} alt="" className="cylinders-card" />
             <ul className="value-position-list">
               <li className="value-position-item">
@@ -147,7 +159,7 @@ const HeaderMob = () => {
             </div>
           </div>
         </li>
-        <li className="mobile-card-item" onClick={onOpenCard}>
+        <li className="mobile-card-item" onClick={onOpenCard} id="2">
           <div className="firs-info-card">
             <div>
               <h2 className="header-card">Аргон</h2>
@@ -158,7 +170,7 @@ const HeaderMob = () => {
             </div>
           </div>
 
-          <div className="wrapper-card">
+          <div className="wrapper-card" onClick={onActivePopUp}>
             <img src={cylindersThree} alt="" className="cylinders-card" />
             <ul className="value-position-list">
               <li className="value-position-item">
@@ -202,7 +214,7 @@ const HeaderMob = () => {
             </div>
           </div>
         </li>
-        <li className="mobile-card-item" onClick={onOpenCard}>
+        <li className="mobile-card-item" onClick={onOpenCard} id="3">
           <div className="firs-info-card">
             <div>
               <h2 className="header-card">Азот</h2>
@@ -215,7 +227,7 @@ const HeaderMob = () => {
             </div>
           </div>
 
-          <div className="wrapper-card">
+          <div className="wrapper-card" onClick={onActivePopUp}>
             <img src={cylindersFour} alt="" className="cylinders-card" />
             <ul className="value-position-list">
               <li className="value-position-item">
@@ -259,7 +271,7 @@ const HeaderMob = () => {
             </div>
           </div>
         </li>
-        <li className="mobile-card-item" onClick={onOpenCard}>
+        <li className="mobile-card-item" onClick={onOpenCard} id="4">
           <div className="firs-info-card">
             <div>
               <h2 className="header-card">Кислород</h2>
@@ -272,7 +284,7 @@ const HeaderMob = () => {
             </div>
           </div>
 
-          <div className="wrapper-card">
+          <div className="wrapper-card" onClick={onActivePopUp}>
             <img src={cylindersFive} alt="" className="cylinders-card" />
             <ul className="value-position-list">
               <li className="value-position-item">
@@ -317,9 +329,13 @@ const HeaderMob = () => {
           </div>
         </li>
       </ul>
-      <div className="modal-info-position"></div>
+      <CardPopUp
+        active={activePopup}
+        ind={indPopup}
+        openCloseCard={() => onActivePopUp()}
+      />
     </>
   );
 };
 
-export default HeaderMob;
+export default Card;

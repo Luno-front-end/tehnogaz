@@ -1,5 +1,5 @@
 import HiroMob from "./components/mobile/HeaderMob";
-import Card from "./components/mobile/Card";
+// import Card from "./components/mobile/Card";
 function App() {
   return (
     <>

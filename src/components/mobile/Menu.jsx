@@ -11,10 +11,14 @@ import {
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import leng from "../../language.json";
+import GoogleMap from "./MenuComponents/Map";
+import WorkTime from "./MenuComponents/WorkTime";
 
 const Menu = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(false);
+  const [activeMap, setActiveMap] = useState(false);
+  const [activeTime, setAactiveTime] = useState(false);
 
   const onMenuActve = (e) => {
     e.preventDefault();
@@ -26,6 +30,14 @@ const Menu = () => {
   };
   const onActiveLeng = (e) => {
     console.log(e.target);
+  };
+  const onActiveMap = () => {
+    setAactiveTime(false);
+    setActiveMap(!activeMap);
+  };
+  const onActiveTime = () => {
+    setActiveMap(false);
+    setAactiveTime(!activeTime);
   };
 
   return (
@@ -84,15 +96,17 @@ const Menu = () => {
                   activeDropdown ? "menu-item menu-itemPosition" : "menu-item"
                 }
               >
-                <button href="#" className="menu-link">
+                <button href="#" className="menu-link" onClick={onActiveMap}>
                   <Location className="location" />
                   Aдрес
                 </button>
+                {activeMap && <GoogleMap />}
               </li>
               <li className="menu-item">
-                <button href="#" className="menu-link">
+                <button href="#" className="menu-link" onClick={onActiveTime}>
                   <Clock />
                 </button>
+                {activeTime && <WorkTime />}
               </li>
               <li className="menu-item">
                 <button href="#" className="menu-link">

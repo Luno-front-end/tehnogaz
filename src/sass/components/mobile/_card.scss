@@ -49,11 +49,9 @@
 }
 .active-card {
   border: none !important;
-&:not(:last-child){
-  margin-bottom: 128px;
-
-}
-
+  &:not(:last-child) {
+    margin-bottom: 128px;
+  }
 }
 .cylinders-card {
   position: absolute;
@@ -123,7 +121,7 @@
   pointer-events: none;
 }
 .wrapper-card_active {
-  top:0; 
+  top: 0;
   bottom: auto;
   opacity: 1;
   pointer-events: painted;
