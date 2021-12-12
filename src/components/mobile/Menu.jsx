@@ -13,12 +13,16 @@ import { Link, NavLink } from "react-router-dom";
 import leng from "../../language.json";
 import GoogleMap from "./MenuComponents/Map";
 import WorkTime from "./MenuComponents/WorkTime";
+import Contacts from "./MenuComponents/Contacts";
+import About from "./MenuComponents/About";
 
 const Menu = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(false);
   const [activeMap, setActiveMap] = useState(false);
   const [activeTime, setAactiveTime] = useState(false);
+  const [activeContacts, setAactiveContacts] = useState(false);
+  const [activeAbout, setAbout] = useState(false);
 
   const onMenuActve = (e) => {
     e.preventDefault();
@@ -32,12 +36,29 @@ const Menu = () => {
     console.log(e.target);
   };
   const onActiveMap = () => {
+    setAbout(false);
+    setAactiveContacts(false);
     setAactiveTime(false);
     setActiveMap(!activeMap);
   };
   const onActiveTime = () => {
+    setAbout(false);
+    setAactiveContacts(false);
     setActiveMap(false);
     setAactiveTime(!activeTime);
+  };
+  const onActiveContacts = () => {
+    setAbout(false);
+    setAactiveTime(false);
+    setActiveMap(false);
+    setAactiveContacts(!activeContacts);
+  };
+  const onActiveAbout = () => {
+    setAbout(false);
+    setAactiveTime(false);
+    setActiveMap(false);
+    setAactiveContacts(false);
+    setAbout(!activeAbout);
   };
 
   return (
@@ -109,16 +130,22 @@ const Menu = () => {
                 {activeTime && <WorkTime />}
               </li>
               <li className="menu-item">
-                <button href="#" className="menu-link">
+                <button
+                  href="#"
+                  className="menu-link"
+                  onClick={onActiveContacts}
+                >
                   <Phone className="phone" />
                   <Email className="email" />
                 </button>
+                {activeContacts && <Contacts />}
               </li>
               <li className="menu-item">
-                <button href="#" className="menu-link">
+                <button href="#" className="menu-link" onClick={onActiveAbout}>
                   <Information className="information" />
                   Информация о нас
                 </button>
+                {activeAbout && <About />}
               </li>
             </ul>
           </div>
