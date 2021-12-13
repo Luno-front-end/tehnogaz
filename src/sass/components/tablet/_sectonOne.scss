@@ -1,2 +1,27 @@
 @include for-size(tablet) {
+  .wrapper-card-clider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .list-slider {
+  }
+  .item-slider {
+  }
+  .slide-img-wrapper {
+  }
+  .slide-img {
+  }
+  .slide-header-wrapper {
+  }
+  .slide-header {
+  }
+  .slide-paragraph-wrapper {
+  }
+  .slide-paragraph {
+  }
+  .slide-btn {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
