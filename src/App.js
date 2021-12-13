@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import HiroMob from "./components/mobile/HeaderMob";
-import HiroDesk from "./components/Desktop/Hiro";
-// import Card from "./components/mobile/Card";
+import HiroMob from "./components/Mobile/HeaderMob";
+import HiroDesk from "./components/Desktop/Hiro/Hiro";
+import SectionGoods from "./components/Desktop/SectionOne/SectionOne";
+// // import Card from "./components/mobile/Card";
 function App() {
   const [width, setWidth] = useState(document.body.clientWidth);
 
@@ -24,7 +25,20 @@ function App() {
           </div>
         </header>
       ) : (
-        <HiroDesk/>
+        <>
+          <header className="wrapper-header">
+            <div className="container">
+              <HiroDesk />
+            </div>
+          </header>
+          <main>
+            <section>
+              <div className="container">
+                <SectionGoods />
+              </div>
+            </section>
+          </main>
+        </>
       )}
     </>
   );

@@ -45,6 +45,8 @@ p {
     overflow: auto;
   }
   @include for-size(tablet) {
+    padding: 0 45px 0 45px;
+
     width: 768px;
   }
   @include for-size(desktop) {
