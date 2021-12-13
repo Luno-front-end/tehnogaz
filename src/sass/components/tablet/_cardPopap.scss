@@ -1,0 +1,138 @@
+.overflow-popup-card {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $overflow-popup-card;
+
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 999999999;
+  opacity: 0;
+  pointer-events: none;
+}
+.active-popup-card {
+  opacity: 1;
+  pointer-events: painted;
+}
+.wrapper-popup-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+
+  text-align: center;
+
+  padding: 10px 10px 15px 10px;
+
+  background-color: $standart-color-white;
+  border: 1px solid $border-popup-card;
+  border-radius: 18px;
+  margin: 0 10px 0 10px;
+}
+.head-popup-card {
+  margin-bottom: 8px;
+
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+
+  color: $standart-color-black;
+}
+.text-popup-card {
+  text-align: left;
+
+  margin-bottom: 15px;
+
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 11px;
+
+  color: $color-text-popup-card;
+}
+.value-popup-card {
+  position: relative;
+  font-family: Yesteryear;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+
+  color: $color-text-card;
+  -webkit-text-stroke: 1px $color-border-text-card;
+  z-index: 1;
+}
+.number-popup-card {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.dubleValue {
+  position: relative;
+}
+.dubleTexOne {
+  position: absolute;
+  top: 5px;
+  left: -24px;
+
+  font-size: 15px;
+  line-height: 22px;
+}
+.dubleTexTwo {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+
+  font-size: 15px;
+  line-height: 22px;
+  z-index: 1;
+}
+.oneCloudPopup {
+  position: absolute;
+  top: 2px;
+  left: -35px;
+  width: 33px;
+  height: 23px;
+}
+.plus-duble-popup {
+  font-size: 17px;
+  line-height: 25px;
+  color: $plus-popup;
+}
+.twoCloudPopup {
+  position: absolute;
+  top: 10px;
+  left: 3px;
+  width: 33px;
+  height: 23px;
+  width: 33px;
+  height: 23px;
+  z-index: 0;
+}
+.number-popup-card-two {
+  font-size: 7px;
+  line-height: 10px;
+}
+.cloud-popup {
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  width: 51px;
+  height: 33px;
+  z-index: -1;
+}
+.cloud-popup-new {
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  width: 51px;
+  height: 33px;
+  z-index: -1;
+}

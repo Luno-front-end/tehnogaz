@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import HiroMob from "./components/mobile/HeaderMob";
+import HiroDesk from "./components/Desktop/Hiro";
 // import Card from "./components/mobile/Card";
 function App() {
   const [width, setWidth] = useState(document.body.clientWidth);
@@ -23,7 +24,7 @@ function App() {
           </div>
         </header>
       ) : (
-        <p>тут планшет і пк</p>
+        <HiroDesk/>
       )}
     </>
   );
