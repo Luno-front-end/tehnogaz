@@ -3,8 +3,10 @@ import Slider from "./Slider";
 const SectionOne = () => {
   return (
     <>
-      <h2>заказ только по телефону</h2>
-      <h3>Цены договорные</h3>
+      <div className="container-sec-text">
+        <h2 className="header-secOne">заказ только по телефону</h2>
+        <h3 className="subHeader-secOne">Цены договорные</h3>
+      </div>
       <Slider />
     </>
   );

@@ -32,7 +32,7 @@ function App() {
             </div>
           </header>
           <main>
-            <section>
+            <section className="section-slider">
               <div className="container">
                 <SectionGoods />
               </div>

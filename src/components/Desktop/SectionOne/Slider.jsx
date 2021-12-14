@@ -13,15 +13,13 @@ const Slider = () => {
       <ul className="list-slider">
         <li className="item-slider">
           <article className="wrapper-card-clider">
-            <div className="slide-img-wrapper">
-              <img
-                width="349"
-                height="256"
-                src={slideOne}
-                alt=""
-                className="slide-img"
-              />
-            </div>
+            <img
+              width="349"
+              height="256"
+              src={slideOne}
+              alt=""
+              className="slide-img"
+            />
             <div className="slide-text-wrapper">
               <h3 className="slide-header">Углекислота</h3>
 
@@ -40,11 +38,15 @@ const Slider = () => {
               </p>
             </div>
             <button type="submite" className="slide-btn">
-              Заказать <span>По телефону</span>
+              <span className="general-text-btn">
+                Заказать
+                <span className="subGeneral-text-btn">По телефону</span>
+              </span>
+              <span className="price-btn-slide">₴300 / 100</span>
             </button>
           </article>
         </li>
-        <li className="item-slider">
+        {/* <li className="item-slider">
           <article>
             <div className="slide-img-wrapper">
               <img
@@ -77,7 +79,7 @@ const Slider = () => {
               Заказать <span>По телефону</span>
             </button>
           </article>
-        </li>
+        </li> */}
       </ul>
     </>
   );
