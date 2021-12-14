@@ -1,4 +1,4 @@
-import infoCard from "../../../infoCardPopUp.json";
+import infoCard from "../../../infoCardPopUpUA.json";
 import { Cloud } from "../../Svg";
 
 const CardPopUp = ({ active, ind, openCloseCard }) => {

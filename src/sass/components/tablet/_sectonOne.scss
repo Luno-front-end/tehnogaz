@@ -2,23 +2,43 @@
   .section-slider {
     padding-top: 65px;
   }
+  .wrapper-slider-desk {
+    position: relative;
+    height: 400px;
+  }
   .container-sec-text {
     margin-bottom: 60px;
     text-align: center;
   }
-  .wrapper-card-clider {
+  .wrapper-card-slider {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 1fr;
     row-gap: 24px;
 
     column-gap: 15px;
   }
   .list-slider {
+    position: relative;
   }
   .item-slider {
+    position: absolute;
+    top: 0;
+    left: -100000px;
+    opacity: 0;
+    padding: 0 20px 0 20px;
+    transition: left 250ms linear;
+    transition: opacity 250ms linear;
+    &.active {
+      top: 0;
+      left: 0;
+      opacity: 1;
+
+      transition: left 250ms linear;
+      transition: opacity 250ms linear;
+    }
   }
-  .slide-img-wrapper {
+  .item-slider .slide-img-wrapper {
     display: inline-block;
   }
   .slide-text-wrapper {
@@ -68,6 +88,8 @@
     border-radius: 5px;
 
     padding: 10px 15px 10px 15px;
+
+    height: 55px;
   }
   .general-text-btn {
     display: flex;
@@ -119,5 +141,72 @@
     line-height: 34px;
 
     color: $standart-color-black;
+  }
+  .previous-btn {
+    position: absolute;
+    top: 30%;
+    left: -40px;
+    border: none;
+    background: $bg-btn-nav-slide;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 9px 12px 9px;
+
+    transform: rotate(180deg);
+  }
+  .next-btn {
+    position: absolute;
+    top: 30%;
+    right: -40px;
+    border: none;
+    background: $bg-btn-nav-slide;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 9px 12px 9px;
+  }
+  .wrapper-img-slide {
+    position: relative;
+    display: inline-block;
+  }
+  .wrapper-value-slide {
+    position: absolute;
+    bottom: 21px;
+    left: 21px;
+  }
+
+  .value-slide {
+    display: flex;
+    flex-direction: column;
+
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 15px;
+
+    color: $standart-color-white;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  .name-value-slide {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 11px;
+
+    color: $color-text-value-slide;
+
+    margin-top: 3px;
+  }
+  .arrowRight-slider {
+    width: 12px;
+    height: 21px;
   }
 }

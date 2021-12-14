@@ -1,87 +1,108 @@
-import infoSlider from "../../../infoSlider.json";
+import { ArrowRight } from "../../Svg";
+
+import infoSlider from "../../../infoSliderUA.json";
 import slideOne from "../../../img/slideOne.png";
 import slideTwo from "../../../img/slideTwo.png";
 import slideThree from "../../../img/slideThree.png";
 import slideFour from "../../../img/slideFour.png";
 import slideFive from "../../../img/slideFive.png";
+import { useState } from "react";
 
 const Slider = () => {
-  console.log(infoSlider[0].img);
+  const [indSlide, setIndSlide] = useState(0);
+  const onSliderNext = () => {
+    if (indSlide === infoSlider.length - 1) {
+      return;
+    }
+    setIndSlide((prevState) => (prevState += 1));
+  };
+  const onSliderPrev = () => {
+    if (indSlide === 0) {
+      return;
+    }
+    setIndSlide((prevState) => (prevState -= 1));
+  };
 
+  const arrayImg = [
+    <img
+      width="349"
+      height="256"
+      src={slideOne}
+      alt={slideOne}
+      className="slide-img"
+    />,
+    <img
+      width="349"
+      height="256"
+      src={slideTwo}
+      alt={slideTwo}
+      className="slide-img"
+    />,
+    <img
+      width="349"
+      height="256"
+      src={slideThree}
+      alt={slideThree}
+      className="slide-img"
+    />,
+    <img
+      width="349"
+      height="256"
+      src={slideFour}
+      alt={slideFour}
+      className="slide-img"
+    />,
+    <img
+      width="349"
+      height="256"
+      src={slideFive}
+      alt={slideFive}
+      className="slide-img"
+    />,
+  ];
+  console.log(arrayImg);
   return (
-    <>
+    <div className="wrapper-slider-desk">
+      <button type="submite" className="previous-btn" onClick={onSliderPrev}>
+        <ArrowRight className="arrowRight-slider" />
+      </button>
       <ul className="list-slider">
-        <li className="item-slider">
-          <article className="wrapper-card-clider">
-            <img
-              width="349"
-              height="256"
-              src={slideOne}
-              alt=""
-              className="slide-img"
-            />
+        <li key={infoSlider.id} className="item-slider active">
+          <article className="wrapper-card-slider">
+            <div className="wrapper-img-slide">
+              {arrayImg[indSlide]}
+              <div className="wrapper-value-slide">
+                <p className="value-slide">
+                  {infoSlider[indSlide].value} л
+                  <span className="name-value-slide">Емкость</span>
+                </p>
+                <p className="value-slide">
+                  {infoSlider[indSlide].capacity} ~ кг
+                  <span className="name-value-slide">Вес баллона</span>
+                </p>
+              </div>
+            </div>
             <div className="slide-text-wrapper">
-              <h3 className="slide-header">Углекислота</h3>
+              <h3 className="slide-header">{infoSlider[indSlide].header}</h3>
 
-              <p className="slide-paragraph">
-                Углекислота (Діоксид вуглецю газ ДСТУ 4817:2007) Углекислота газ
-                без цвета и запаха, слаботоксичен, имеет специфический немного
-                кислый вкус. Негорюч, не поддерживает горение, в 1,5 раза
-                тяжелее воздуха, хорошо растворяется в воде, образуя СО.
-                Температура кипения -78,3°С. В промышленности используют
-                различные свойства двуокиси углерода. В пищевой промышленности
-                СО2 применяют для замораживания, хранения и кислотного контроля,
-                для газирования напитков. В химической промышленности для
-                контроля кислотности воды. Также двуокись углерода применяют для
-                сварки металлов в качестве защитного газа, для стимулирования
-                роста растений в тепличном хозяйстве.
-              </p>
+              <p className="slide-paragraph">{infoSlider[indSlide].text}</p>
             </div>
             <button type="submite" className="slide-btn">
               <span className="general-text-btn">
                 Заказать
                 <span className="subGeneral-text-btn">По телефону</span>
               </span>
-              <span className="price-btn-slide">₴300 / 100</span>
+              <span className="price-btn-slide">
+                ₴{infoSlider[indSlide].price}
+              </span>
             </button>
           </article>
         </li>
-        {/* <li className="item-slider">
-          <article>
-            <div className="slide-img-wrapper">
-              <img
-                width="349"
-                height="256"
-                src={slideOne}
-                alt=""
-                className="slide-img"
-              />
-            </div>
-            <div className="slide-header-wrapper">
-              <h3 className="slide-header">Углекислота</h3>
-            </div>
-            <div className="slide-paragraph-wrapper">
-              <p className="slide-paragraph">
-                Углекислота (Діоксид вуглецю газ ДСТУ 4817:2007) Углекислота газ
-                без цвета и запаха, слаботоксичен, имеет специфический немного
-                кислый вкус. Негорюч, не поддерживает горение, в 1,5 раза
-                тяжелее воздуха, хорошо растворяется в воде, образуя СО.
-                Температура кипения -78,3°С. В промышленности используют
-                различные свойства двуокиси углерода. В пищевой промышленности
-                СО2 применяют для замораживания, хранения и кислотного контроля,
-                для газирования напитков. В химической промышленности для
-                контроля кислотности воды. Также двуокись углерода применяют для
-                сварки металлов в качестве защитного газа, для стимулирования
-                роста растений в тепличном хозяйстве.
-              </p>
-            </div>
-            <button type="submite" className="slide-btn">
-              Заказать <span>По телефону</span>
-            </button>
-          </article>
-        </li> */}
       </ul>
-    </>
+      <button type="submite" className="next-btn" onClick={onSliderNext}>
+        <ArrowRight className="arrowRight-slider" />
+      </button>
+    </div>
   );
 };
 

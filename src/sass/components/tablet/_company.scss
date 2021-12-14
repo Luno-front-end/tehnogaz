@@ -1,0 +1,41 @@
+@include for-size(tablet) {
+  .section-company {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  .wrapper-text-company {
+    margin: 0 auto;
+    width: 512px;
+  }
+  .header-company {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 19px;
+
+    color: $standart-color-black;
+
+    margin-bottom: 23px;
+
+    text-align: center;
+  }
+  .subHeader-company {
+    font-weight: 900;
+  }
+  .text-sec-company {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+
+    color: $color-text-popup-card;
+
+    & span {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
