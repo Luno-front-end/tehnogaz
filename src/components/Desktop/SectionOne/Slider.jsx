@@ -10,17 +10,29 @@ import { useState } from "react";
 
 const Slider = () => {
   const [indSlide, setIndSlide] = useState(0);
+  const [onSlide, setOnSlide] = useState(true);
+
   const onSliderNext = () => {
     if (indSlide === infoSlider.length - 1) {
       return;
     }
-    setIndSlide((prevState) => (prevState += 1));
+    setOnSlide(false);
+
+    setTimeout(() => {
+      setIndSlide((prevState) => (prevState += 1));
+      setOnSlide(true);
+    }, 200);
   };
   const onSliderPrev = () => {
     if (indSlide === 0) {
       return;
     }
-    setIndSlide((prevState) => (prevState -= 1));
+    setOnSlide(false);
+
+    setTimeout(() => {
+      setIndSlide((prevState) => (prevState -= 1));
+      setOnSlide(true);
+    }, 200);
   };
 
   const arrayImg = [
@@ -67,7 +79,10 @@ const Slider = () => {
         <ArrowRight className="arrowRight-slider" />
       </button>
       <ul className="list-slider">
-        <li key={infoSlider.id} className="item-slider active">
+        <li
+          key={infoSlider.id}
+          className={onSlide ? "active item-slider" : "item-slider"}
+        >
           <article className="wrapper-card-slider">
             <div className="wrapper-img-slide">
               {arrayImg[indSlide]}

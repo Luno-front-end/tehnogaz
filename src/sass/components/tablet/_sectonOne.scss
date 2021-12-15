@@ -22,25 +22,19 @@
     position: relative;
   }
   .item-slider {
-    position: absolute;
-    top: 0;
-    left: -100000px;
     opacity: 0;
-    padding: 0 20px 0 20px;
-    transition: left 250ms linear;
-    transition: opacity 250ms linear;
-    &.active {
-      top: 0;
-      left: 0;
-      opacity: 1;
 
-      transition: left 250ms linear;
-      transition: opacity 250ms linear;
+    transform: translate(-300%);
+    transition: all 250ms;
+
+    &.active {
+      opacity: 1;
+      transform: translate(0);
+
+      transition: all 250ms;
     }
   }
-  .item-slider .slide-img-wrapper {
-    display: inline-block;
-  }
+
   .slide-text-wrapper {
     // grid-column-start: 2;
     grid-row-start: 1;

@@ -1,6 +1,136 @@
 @include for-size(tablet) {
   .footer {
+    padding: 18px 0 18px 0;
     background-color: $bg-footer;
-    color: white;
+    color: $standart-color-white;
+  }
+  .wrapper-info-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .street-head {
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 8px;
+
+    margin-bottom: 8px;
+  }
+  .street-text {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 8px;
+
+    margin-bottom: 16px;
+  }
+  .copyright {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 8px;
+
+    color: $subColor-text-footer;
+  }
+  .wrapper-contacts-footer {
+  }
+  .head-contacts-footer {
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 8px;
+
+    margin-bottom: 6px;
+  }
+  .contacts-footer-list {
+  }
+  .link-contact-footer {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 8px;
+
+    color: $standart-color-white;
+  }
+  .contacts-footer-item {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  .wrapper-logo-footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    padding-left: 88px;
+    padding-right: 88px;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 50px;
+      height: 1px;
+
+      background-color: $subColor-text-footer;
+      border-radius: 5px;
+    }
+    &::after {
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      width: 50px;
+      height: 1px;
+      background-color: $subColor-text-footer;
+      border-radius: 5px;
+    }
+  }
+  .logo-footer {
+  }
+  .work-footer-list {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+  }
+  .work-footer-item {
+    &:not(:last-child) {
+      margin-right: 30px;
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 37px;
+        height: 3px;
+        background-color: $standart-color-black;
+        border-radius: 5px;
+
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+  .work-text-day {
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 8px;
+
+    margin-bottom: 8px;
+  }
+  .work-text-hour {
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 8px;
   }
 }
