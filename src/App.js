@@ -34,7 +34,7 @@ function App() {
                 <SectionGoods />
               </div>
             </section>
-            <section className="section-aboutUs">
+            <section id="AuboutUs" className="section-aboutUs">
               <div className="container">
                 <AboutUs />
               </div>

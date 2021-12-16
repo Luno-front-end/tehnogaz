@@ -7,6 +7,7 @@
 @import "./sass/components/mobile/card";
 @import "./sass/components/mobile/cardPopap";
 @import "./sass/components/mobile/menuComponents";
+// tablet
 @import "./sass/components/tablet/logoTab";
 @import "./sass/components/tablet/header";
 @import "./sass/components/tablet/dropDownTab";
@@ -16,3 +17,13 @@
 @import "./sass/components/tablet/aboutUs";
 @import "./sass/components/tablet/company";
 @import "./sass/components/tablet/footer";
+//desktop
+@import "./sass/components/desktop/logoTab";
+@import "./sass/components/desktop/header";
+@import "./sass/components/desktop/dropDownTab";
+@import "./sass/components/desktop/hiroText";
+@import "./sass/components/desktop/menu";
+@import "./sass/components/desktop/sectonOne";
+@import "./sass/components/desktop/aboutUs";
+@import "./sass/components/desktop/company";
+@import "./sass/components/desktop/footer";
