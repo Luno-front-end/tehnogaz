@@ -1,16 +1,18 @@
 @include for-size(desktop) {
   .menu-link {
     font-family: Montserrat !important;
-    font-size: 8px !important;
-    line-height: 10px !important;
+    font-size: 15px !important;
+    line-height: 18px !important;
 
     padding: 8px 0 8px 8px !important;
-    min-width: 100px;
+    min-width: 157px;
     align-items: center;
     justify-content: space-between !important;
   }
   .arrowDown {
-    top: 13px;
+    top: 10px;
+    width: 14px;
+    height: 16px;
   }
   .menu-item {
     height: 23px;
@@ -21,8 +23,8 @@
   .dropdown-link {
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 8px;
-    line-height: 10px;
+    font-size: 15px;
+    line-height: 18px;
     justify-content: flex-start;
     padding: 8px 0 8px 8px;
   }

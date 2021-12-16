@@ -1,4 +1,5 @@
 import logo from "../../img/logoFooter.png";
+import { LogoFooter } from "../Svg";
 
 const Footer = () => {
   return (
@@ -32,7 +33,8 @@ const Footer = () => {
         </ul>
       </div>
       <div className="wrapper-logo-footer">
-        <img src={logo} alt="tehnogaz" className="logo-footer" />
+        <LogoFooter className="logo-footer" />
+        {/* <img src={logo} alt="tehnogaz" className="logo-footer" /> */}
       </div>
       <ul className="work-footer-list">
         <li className="work-footer-item">

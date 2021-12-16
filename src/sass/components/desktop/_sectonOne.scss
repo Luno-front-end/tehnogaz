@@ -1,10 +1,12 @@
 @include for-size(desktop) {
   .section-slider {
     padding-top: 65px;
+    padding-bottom: 90px;
   }
   .wrapper-slider-desk {
     position: relative;
     height: 400px;
+    z-index: 1;
   }
   .container-sec-text {
     margin-bottom: 60px;
@@ -12,11 +14,12 @@
   }
   .wrapper-card-slider {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 24px;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: auto 300px;
+    row-gap: 18px;
+    justify-content: center;
 
-    column-gap: 15px;
+    column-gap: 30px;
   }
   .list-slider {
     position: relative;
@@ -37,12 +40,13 @@
 
   .slide-text-wrapper {
     // grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    // grid-row-start: 1;
+    // grid-row-end: 3;
   }
   .slide-img {
     display: block;
-
+    width: 500px;
+    height: 387px;
     grid-column: 1;
     grid-row: 1;
   }
@@ -51,8 +55,8 @@
   .slide-header {
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 23px;
+    font-size: 35px;
+    line-height: 26px;
 
     text-transform: capitalize;
 
@@ -65,14 +69,14 @@
   .slide-paragraph {
     font-family: Roboto;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 21px;
+    line-height: 21px;
 
     color: $color-text-popup-card;
   }
   .slide-btn {
-    grid-column: 1;
-    grid-row: 2;
+    grid-column: 2;
+    // grid-row: 2;
     display: flex;
     justify-content: space-between;
     // align-items: center;
@@ -118,8 +122,8 @@
   .header-secOne {
     font-family: Montserrat;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 11px;
+    font-size: 20px;
+    line-height: 15px;
 
     letter-spacing: 0.885em;
     text-transform: uppercase;
@@ -131,15 +135,15 @@
   .subHeader-secOne {
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 45px;
-    line-height: 34px;
+    font-size: 65px;
+    line-height: 49px;
 
     color: $standart-color-black;
   }
   .previous-btn {
     position: absolute;
-    top: 30%;
-    left: -40px;
+    top: 45%;
+    left: 15px;
     border: none;
     background: $bg-btn-nav-slide;
     border-radius: 5px;
@@ -147,14 +151,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 9px 12px 9px;
+    padding: 18px 15px 18px 15px;
 
     transform: rotate(180deg);
+    z-index: 5;
   }
   .next-btn {
     position: absolute;
-    top: 30%;
-    right: -40px;
+    top: 45%;
+    right: 15px;
     border: none;
     background: $bg-btn-nav-slide;
     border-radius: 5px;
@@ -162,11 +167,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 9px 12px 9px;
+    padding: 18px 15px 18px 15px;
   }
   .wrapper-img-slide {
     position: relative;
     display: inline-block;
+    grid-column: 1;
+    grid-row: 1;
+    // width: 562px;
+    // height: 411px;
   }
   .wrapper-value-slide {
     position: absolute;
@@ -180,8 +189,8 @@
 
     font-family: Roboto;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 15px;
+    font-size: 25px;
+    line-height: 19px;
 
     color: $standart-color-white;
 
@@ -192,15 +201,15 @@
   .name-value-slide {
     font-family: Roboto;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 11px;
+    font-size: 20px;
+    line-height: 15px;
 
     color: $color-text-value-slide;
 
     margin-top: 3px;
   }
   .arrowRight-slider {
-    width: 12px;
-    height: 21px;
+    width: 15px;
+    height: 26px;
   }
 }

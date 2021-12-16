@@ -1,10 +1,21 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import HiroMob from "./components/Mobile/HeaderMob";
 import HiroDesk from "./components/Desktop/Hiro/Hiro";
-import SectionGoods from "./components/Desktop/SectionOne/SectionOne";
-import AboutUs from "./components/Desktop/SectionAboutUs";
-import Company from "./components/Desktop/SectionСompany";
-import Footer from "./components/Desktop/Footer";
+// import SectionGoods from "./components/Desktop/SectionOne/SectionOne";
+// import AboutUs from "./components/Desktop/SectionAboutUs";
+// import Company from "./components/Desktop/SectionСompany";
+// import Footer from "./components/Desktop/Footer";
+
+import Preload from "./components/Preload";
+
+// const HiroMob = React.lazy(() => import("./components/Mobile/HeaderMob"));
+// const HiroDesk = React.lazy(() => import("./components/Desktop/Hiro/Hiro"));
+const SectionGoods = React.lazy(() =>
+  import("./components/Desktop/SectionOne/SectionOne")
+);
+const AboutUs = React.lazy(() => import("./components/Desktop/SectionAboutUs"));
+const Company = React.lazy(() => import("./components/Desktop/SectionСompany"));
+const Footer = React.lazy(() => import("./components/Desktop/Footer"));
 
 function App() {
   const [width, setWidth] = useState(document.body.clientWidth);
@@ -12,7 +23,6 @@ function App() {
   window.onresize = function (e) {
     setWidth(e.currentTarget.screen.width);
   };
-  console.log(width);
   return (
     <>
       {width < 768 ? (
@@ -31,23 +41,31 @@ function App() {
           <main>
             <section className="section-slider">
               <div className="container">
-                <SectionGoods />
+                <Suspense fallback={<Preload />}>
+                  <SectionGoods />
+                </Suspense>
               </div>
             </section>
             <section id="AuboutUs" className="section-aboutUs">
               <div className="container">
-                <AboutUs />
+                <Suspense fallback={<Preload />}>
+                  <AboutUs />
+                </Suspense>
               </div>
             </section>
             <section className="section-company">
               <div className="container">
-                <Company />
+                <Suspense fallback={<Preload />}>
+                  <Company />
+                </Suspense>
               </div>
             </section>
           </main>
           <footer className="footer">
             <div className="container">
-              <Footer />
+              <Suspense fallback={<Preload />}>
+                <Footer />
+              </Suspense>
             </div>
           </footer>
         </>

@@ -9,7 +9,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 // #root {
-//   height: 100%;
+//   @include for-size(tabldesktopet) {
+//     &::-webkit-scrollbar {
+//       width: 0;
+//       height: 0;
+//     }
+//   }
 // }
 ul {
   list-style: none;
@@ -50,6 +55,7 @@ p {
     width: 768px;
   }
   @include for-size(desktop) {
+    padding: 0 50px 0 50px;
     width: 1280px;
   }
   @include for-size(fullDesktop) {

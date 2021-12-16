@@ -16,18 +16,15 @@
     // background: $bg-color-subMenu;
     border: 1px solid $standart-color-white;
     border-radius: 3px;
-    &:nth-child(2) {
-      // transition: all 800ms;
-      &:hover {
-        background: $bg-color-subMenu;
+    &:hover {
+      background: $bg-color-subMenu;
 
-        transition: all 800ms;
-      }
-      &:focus {
-        background: $bg-color-subMenu;
+      transition: all 800ms;
+    }
+    &:focus {
+      background: $bg-color-subMenu;
 
-        transition: all 800ms;
-      }
+      transition: all 800ms;
     }
 
     &:nth-child(3) {
@@ -79,15 +76,10 @@
     }
   }
   .link-item-nav {
-    // position: relative;
-    // display: inline-block;
-    // padding: 8px 10px 8px 10px;
-    // display: flex;
-    // align-items: center;
   }
   .icon-nav {
-    width: 12px;
-    height: 12px;
+    width: 22px;
+    height: 22px;
 
     margin-right: 8px;
   }
@@ -99,8 +91,8 @@
 
     font-family: Montserrat;
     font-weight: 700;
-    font-size: 11px;
-    line-height: 8px;
+    font-size: 18px;
+    line-height: 14px;
 
     color: $standart-color-white;
   }
@@ -108,21 +100,23 @@
     margin-top: 5px;
 
     font-weight: 500;
-    font-size: 10px;
+    font-size: 16px;
+
+    line-height: 12px;
 
     color: $subText-link-nav-desk;
   }
   .wrapper-content-link-menu {
-    padding: 8px 10px 8px 10px;
+    padding: 16px 76px 16px 25px;
     display: flex;
     align-items: center;
   }
   .absolute-info-link-list {
     position: absolute;
-    bottom: 37px;
+    bottom: 64px;
     left: -1px;
-    width: 102%;
-    padding: 12px 0 15px 10px;
+    width: 101%;
+    padding: 22px 0 22px 25px;
     background: $bg-color-openMenu;
     border-top: 1px solid $standart-color-white;
     border-left: 1px solid $standart-color-white;
@@ -145,19 +139,16 @@
     display: flex;
     align-items: center;
 
-    //
-    //
-
     &:not(:last-child) {
-      margin-bottom: 25px;
+      margin-bottom: 40px;
 
       &::before {
         content: " ";
         position: absolute;
-        bottom: -16px;
-        right: 40px;
+        bottom: -25px;
+        right: 97px;
         display: block;
-        width: 50px;
+        width: 76px;
         height: 2px;
         background-color: $subText-link-nav-desk;
         border-radius: 9px;
@@ -170,17 +161,17 @@
   .days-menu-work-desk {
     font-family: Montserrat;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 8px;
-    margin-bottom: 9px;
+    font-size: 21px;
+    line-height: 16px;
+    margin-bottom: 8px;
 
     color: $subText-link-nav-desk;
   }
   .hour-menu-work-desk {
     font-family: Montserrat;
     font-weight: 900;
-    font-size: 11px;
-    line-height: 7px;
+    font-size: 17px;
+    line-height: 13px;
 
     white-space: nowrap;
     color: $standart-color-white;
@@ -189,7 +180,7 @@
     display: inline;
     & .contact-menu-desk {
       &:not(:last-child) {
-        margin-bottom: 8px;
+        margin-bottom: 11px;
       }
     }
   }
@@ -206,42 +197,50 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: 800;
-    font-size: 10.7px;
-    line-height: 12px;
+    font-size: 17px;
+    line-height: 13px;
 
     color: $standart-color-white;
   }
   .name-menu-contact-desk {
     font-family: Montserrat;
     font-weight: 400;
-    font-size: 9px;
-    line-height: 5px;
+    font-size: 15px;
+    line-height: 11px;
 
     color: $subText-link-nav-desk;
 
-    margin-top: 3px;
+    margin-top: 8px;
   }
   .map-tab-img {
+    width: 230px;
+    height: 200px;
     border-radius: 6px 6px 0px 0px;
   }
 
   .workMF-iconTab {
     fill: $icon-color-menu;
-    width: 35px;
-    height: 35px;
-    margin-right: 9px;
+    width: 50px;
+    height: 50px;
+    margin-right: 18px;
   }
   .workSat-iconTab {
     fill: $icon-color-menu;
-    width: 35px;
-    height: 35px;
-    margin-right: 9px;
+    width: 50px;
+    height: 50px;
+    margin-right: 18px;
   }
   .contactsPhone-iconTab {
     fill: $icon-color-menu;
     transform: rotate(135deg);
+    width: 16px;
+    height: 16px;
+    margin-bottom: 5px;
   }
   .contactsEmail-iconTab {
     fill: $icon-color-menu;
+    width: 22px;
+    height: 16.5px;
+    margin-bottom: 10px;
   }
 }

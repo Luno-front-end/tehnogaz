@@ -16,8 +16,15 @@
     // background: $bg-color-subMenu;
     border: 1px solid $standart-color-white;
     border-radius: 3px;
+    width: 100%;
+    &:nth-child(1) {
+      .absolute-info-link-list {
+        padding-right: 31px;
+      }
+    }
     &:nth-child(2) {
       // transition: all 800ms;
+
       &:hover {
         background: $bg-color-subMenu;
 
@@ -56,6 +63,7 @@
       .absolute-info-link-list {
         padding-top: 3px;
         padding-left: 3px;
+        padding-right: 2px;
       }
     }
 
@@ -121,8 +129,8 @@
     position: absolute;
     bottom: 37px;
     left: -1px;
-    width: 102%;
-    padding: 12px 0 15px 10px;
+    min-width: 145px;
+    padding: 12px 5px 15px 10px;
     background: $bg-color-openMenu;
     border-top: 1px solid $standart-color-white;
     border-left: 1px solid $standart-color-white;
@@ -155,7 +163,7 @@
         content: " ";
         position: absolute;
         bottom: -16px;
-        right: 40px;
+        right: 9px;
         display: block;
         width: 50px;
         height: 2px;
@@ -222,6 +230,7 @@
     margin-top: 3px;
   }
   .map-tab-img {
+    display: block;
     border-radius: 6px 6px 0px 0px;
   }
 
