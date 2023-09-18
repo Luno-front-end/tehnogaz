@@ -4,6 +4,7 @@ import cylindersTwo from "../../../img/cylindersTwo.png";
 import cylindersThree from "../../../img/cylindersThree.png";
 import cylindersFour from "../../../img/cylindersFour.png";
 import cylindersFive from "../../../img/cylindersFive.png";
+import infoCard from "../../../infoSliderRU.json";
 
 import CardPopUp from "./CardPopUp";
 import { useState } from "react";
@@ -13,15 +14,12 @@ const Card = () => {
   const [indPopup, setIndPopup] = useState(null);
 
   const onOpenCard = (e) => {
-    // console.log(typeof e.target.id);
-
     const activeLi = document.querySelectorAll(".mobile-card-item");
     const activeCard = document.querySelectorAll(".wrapper-card_active");
 
     const li = e.target.closest("li");
 
     if (li === null) return;
-    console.log(li.classList.value);
     if (li.classList.value !== "mobile-card-item") return;
 
     activeLi.forEach((_li, i) => {
@@ -34,7 +32,6 @@ const Card = () => {
     e.target.classList.add("active-card");
     e.target.children[1].classList.add("wrapper-card_active");
     if (e.target.id === "undefined") {
-      console.log("object");
       return;
     }
     setIndPopup(e.target.id);
@@ -88,7 +85,7 @@ const Card = () => {
                 <p className="info-contacts-position">
                   Заказ только <br /> по телефону
                 </p>
-                <p className="price-position">₴300 / 100</p>
+                <p className="price-position">₴{infoCard[0].price}</p>
               </div>
               <ul className="wrapper-contact-position_list">
                 <li className="wrapper-contact-item">
@@ -162,7 +159,7 @@ const Card = () => {
                 <p className="info-contacts-position">
                   Заказ только <br /> по телефону
                 </p>
-                <p className="price-position">₴290</p>
+                <p className="price-position">₴{infoCard[1].price}</p>
               </div>
               <ul className="wrapper-contact-position_list">
                 <li className="wrapper-contact-item">
@@ -226,7 +223,7 @@ const Card = () => {
                 <p className="info-contacts-position">
                   Заказ только <br /> по телефону
                 </p>
-                <p className="price-position">₴280</p>
+                <p className="price-position">₴{infoCard[2].price}</p>
               </div>
               <ul className="wrapper-contact-position_list">
                 <li className="wrapper-contact-item">
@@ -292,7 +289,7 @@ const Card = () => {
                 <p className="info-contacts-position">
                   Заказ только <br /> по телефону
                 </p>
-                <p className="price-position">₴160</p>
+                <p className="price-position">₴{infoCard[3].price}</p>
               </div>
               <ul className="wrapper-contact-position_list">
                 <li className="wrapper-contact-item">
@@ -358,7 +355,7 @@ const Card = () => {
                 <p className="info-contacts-position">
                   Заказ только <br /> по телефону
                 </p>
-                <p className="price-position">₴96</p>
+                <p className="price-position">₴{infoCard[4].price}</p>
               </div>
               <ul className="wrapper-contact-position_list">
                 <li className="wrapper-contact-item">

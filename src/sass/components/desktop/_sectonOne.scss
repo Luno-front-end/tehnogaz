@@ -1,11 +1,11 @@
 @include for-size(desktop) {
   .section-slider {
     padding-top: 65px;
-    padding-bottom: 90px;
+    // padding-bottom: 90px;
+    height: 100vh;
   }
   .wrapper-slider-desk {
     position: relative;
-    height: 400px;
     z-index: 1;
   }
   .container-sec-text {
@@ -15,7 +15,7 @@
   .wrapper-card-slider {
     display: grid;
     grid-template-columns: 500px 500px;
-    grid-template-rows: auto 300px;
+    // grid-template-rows: auto 300px;
     row-gap: 18px;
     justify-content: center;
 
@@ -39,9 +39,7 @@
   }
 
   .slide-text-wrapper {
-    // grid-column-start: 2;
-    // grid-row-start: 1;
-    // grid-row-end: 3;
+    text-align: left;
   }
   .slide-img {
     display: block;
@@ -168,19 +166,21 @@
     align-items: center;
     justify-content: center;
     padding: 18px 15px 18px 15px;
+    z-index: 999999;
   }
   .wrapper-img-slide {
     position: relative;
     display: inline-block;
     grid-column: 1;
     grid-row: 1;
-    // width: 562px;
-    // height: 411px;
   }
+
   .wrapper-value-slide {
     position: absolute;
     bottom: 21px;
     left: 21px;
+
+    text-align: left;
   }
 
   .value-slide {
@@ -212,4 +212,34 @@
     width: 15px;
     height: 26px;
   }
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adw {
+  width: 50px;
+  height: 50px;
+  display: block;
+
+  background-color: black;
 }

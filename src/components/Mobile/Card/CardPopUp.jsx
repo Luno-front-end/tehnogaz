@@ -22,7 +22,6 @@ const CardPopUp = ({ active, ind, openCloseCard }) => {
       );
     }
     if (ind === "2" || ind === "3" || ind === "4") {
-      console.log(ind);
       return (
         <p className="value-popup-card">
           <Cloud className="cloud-popup-new" />
@@ -52,28 +51,6 @@ const CardPopUp = ({ active, ind, openCloseCard }) => {
         <p className="text-popup-card">{infoCard[ind]?.text}</p>
         <div className="dubleValue">
           {variantRenderCloud()}
-          {/* {infoCard[ind]?.valueTwo ? (
-            <div className="value-popup-card ">
-              <Cloud className="oneCloudPopup" />
-              <span className="dubleTexOne">{infoCard[ind]?.value}</span>{" "}
-              {infoCard[ind]?.valueTwo && (
-                <span className="plus-duble-popup">+ </span>
-              )}
-              <span className="dubleTexTwo">
-                {infoCard[ind]?.valueTwo}
-                <span className="number-popup-card-two">
-                  {infoCard[ind]?.number}
-                </span>
-              </span>
-              <Cloud className="twoCloudPopup" />
-            </div>
-          ) : (
-            <p className="value-popup-card">
-              <Cloud className="cloud-popup" />
-              {infoCard[ind]?.value}
-              <span className="number-popup-card">{infoCard[ind]?.number}</span>
-            </p>
-          )} */}
         </div>
       </div>
     </div>

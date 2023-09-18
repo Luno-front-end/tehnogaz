@@ -35,9 +35,11 @@ function App() {
           <main>
             <section className="section-slider">
               <div className="container">
-                <Suspense fallback={<Preload />}>
-                  <SectionGoods />
-                </Suspense>
+                <div>
+                  <Suspense fallback={<Preload />}>
+                    <SectionGoods />
+                  </Suspense>
+                </div>
               </div>
             </section>
             <section id="AuboutUs" className="section-aboutUs">
