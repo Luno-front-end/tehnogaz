@@ -1,15 +1,9 @@
 import React, { useEffect, useState, Suspense } from "react";
 import HiroMob from "./components/Mobile/HeaderMob";
 import HiroDesk from "./components/Desktop/Hiro/Hiro";
-// import SectionGoods from "./components/Desktop/SectionOne/SectionOne";
-// import AboutUs from "./components/Desktop/SectionAboutUs";
-// import Company from "./components/Desktop/SectionСompany";
-// import Footer from "./components/Desktop/Footer";
 
-import Preload from "./components/Preload";
+import Preload from "./components/Preloader/Preload";
 
-// const HiroMob = React.lazy(() => import("./components/Mobile/HeaderMob"));
-// const HiroDesk = React.lazy(() => import("./components/Desktop/Hiro/Hiro"));
 const SectionGoods = React.lazy(() =>
   import("./components/Desktop/SectionOne/SectionOne")
 );

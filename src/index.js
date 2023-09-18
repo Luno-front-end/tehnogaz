@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import Preload from "./components/Preload";
+import Preload from "./components/Preloader/Preload";
 
 import "modern-normalize/modern-normalize.css";
 import "./index.scss";
