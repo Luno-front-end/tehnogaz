@@ -1,0 +1,32 @@
+@include for-size(desktop) {
+    .hero-text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+    }
+    .hero-text-header {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 23px;
+
+        letter-spacing: 0.885em;
+        text-transform: uppercase;
+
+        color: $standart-color-white;
+        margin-bottom: 24px;
+    }
+    .hero-text-subHeader {
+        font-family: Montserrat;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 75px;
+
+        text-transform: capitalize;
+
+        color: $standart-color-white;
+    }
+}
