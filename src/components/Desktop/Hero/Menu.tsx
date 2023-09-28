@@ -2,32 +2,26 @@ import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, Information, Location, Phone, WorkMF, WorkSat, Email } from '../../Svg';
 import map from '../../../img/map.png';
+import { useTranslation } from 'react-i18next';
 
 const Menu: FC = () => {
     const [openWorkItem, setOpenWorkItem] = useState<boolean>(false);
     const [openContactsItem, setOpenContactsItem] = useState<boolean>(false);
     const [openMapItem, setOpenMapItem] = useState<boolean>(false);
-    const onOpenWorkItem = () => {
-        setOpenMapItem(false);
-        setOpenContactsItem(false);
-        setOpenWorkItem(!openWorkItem);
+    const { t } = useTranslation();
+
+    const onOpenItems = (category: 'map' | 'contacts' | 'work') => {
+        setOpenMapItem(category === 'map' ? !openMapItem : false);
+        setOpenContactsItem(category === 'contacts' ? !openContactsItem : false);
+        setOpenWorkItem(category === 'work' ? !openWorkItem : false);
     };
-    const onOpenContactsItem = () => {
-        setOpenMapItem(false);
-        setOpenWorkItem(false);
-        setOpenContactsItem(!openContactsItem);
-    };
-    const onOpenMapItem = () => {
-        setOpenContactsItem(false);
-        setOpenWorkItem(false);
-        setOpenMapItem(!openMapItem);
-    };
+
     return (
         <div className="container-nav">
             <ul className="nav-list-tab">
                 <li className={openWorkItem ? 'nav-item-tab active' : 'nav-item-tab'}>
                     <ul
-                        onClick={onOpenWorkItem}
+                        onClick={() => onOpenItems('work')}
                         className={
                             openWorkItem
                                 ? 'absolute-info-link-list active'
@@ -37,23 +31,28 @@ const Menu: FC = () => {
                         <li className="absolute-info-link-item">
                             <WorkMF className="workMF-iconTab" />
                             <div className="wrapper-menu-work">
-                                <p className="days-menu-work-desk">Пн-Пт</p>
+                                <p className="days-menu-work-desk">
+                                    {t('hero.buttons.work.first')}
+                                </p>
                                 <p className="hour-menu-work-desk">8:00-17:00</p>
                             </div>
                         </li>
                         <li className="absolute-info-link-item">
                             <WorkSat className="workSat-iconTab" />
                             <div className="wrapper-menu-work">
-                                <p className="days-menu-work-desk">Cуббота </p>
+                                <p className="days-menu-work-desk">{t('hero.buttons.work.last')}</p>
                                 <p className="hour-menu-work-desk">9:00-15:00</p>
                             </div>
                         </li>
                     </ul>
-                    <Link to="/" className="link-item-nav" onClick={onOpenWorkItem}>
+                    <Link to="/" className="link-item-nav" onClick={() => onOpenItems('work')}>
                         <div className="wrapper-content-link-menu">
                             <Clock className="icon-nav" />
                             <span className="general-link-text">
-                                Рабочие часы <span className="sub-text-link">Узнать</span>
+                                {t('hero.buttons.b1.title')}
+                                <span className="sub-text-link">
+                                    {t('hero.buttons.b1.subTitle')}
+                                </span>
                             </span>
                         </div>
                     </Link>
@@ -63,14 +62,17 @@ const Menu: FC = () => {
                         <div className="wrapper-content-link-menu">
                             <Information className="icon-nav" />
                             <span className="general-link-text">
-                                Инфо о нас <span className="sub-text-link">Узнать</span>
+                                {t('hero.buttons.b2.title')}
+                                <span className="sub-text-link">
+                                    {t('hero.buttons.b2.subTitle')}
+                                </span>
                             </span>
                         </div>
                     </a>
                 </li>
                 <li className={openContactsItem ? 'nav-item-tab active' : 'nav-item-tab'}>
                     <ul
-                        onClick={onOpenContactsItem}
+                        onClick={() => onOpenItems('contacts')}
                         className={
                             openContactsItem
                                 ? 'absolute-info-link-list active'
@@ -89,7 +91,9 @@ const Menu: FC = () => {
                                     <a className="communications-menu" href="tel:0953614833">
                                         +38 (095) 361-48-33
                                     </a>
-                                    <p className="name-menu-contact-desk">Номер телефона</p>
+                                    <p className="name-menu-contact-desk">
+                                        {t('hero.buttons.contacts.number')}
+                                    </p>
                                 </li>
                             </ul>
                         </li>
@@ -103,23 +107,28 @@ const Menu: FC = () => {
                                     >
                                         tehnogaztorg@ukr.net
                                     </a>
-                                    <p className="name-menu-contact-desk">Почтовый адрес</p>
+                                    <p className="name-menu-contact-desk">
+                                        {t('hero.buttons.contacts.mail')}
+                                    </p>
                                 </li>
                             </ul>
                         </li>
                     </ul>
-                    <Link to="/" className="link-item-nav" onClick={onOpenContactsItem}>
+                    <Link to="/" className="link-item-nav" onClick={() => onOpenItems('contacts')}>
                         <div className="wrapper-content-link-menu">
                             <Phone className="icon-nav" />
                             <span className="general-link-text">
-                                Контакты <span className="sub-text-link">Узнать</span>
+                                {t('hero.buttons.b3.title')}
+                                <span className="sub-text-link">
+                                    {t('hero.buttons.b3.subTitle')}
+                                </span>
                             </span>
                         </div>
                     </Link>
                 </li>
                 <li className={openMapItem ? 'nav-item-tab active' : 'nav-item-tab'}>
                     <div
-                        onClick={onOpenMapItem}
+                        onClick={() => onOpenItems('map')}
                         className={
                             openMapItem
                                 ? 'absolute-info-link-list active'
@@ -142,11 +151,14 @@ const Menu: FC = () => {
                             </a>
                         </div>
                     </div>
-                    <Link to="/" className="link-item-nav" onClick={onOpenMapItem}>
+                    <Link to="/" className="link-item-nav" onClick={() => onOpenItems('map')}>
                         <div className="wrapper-content-link-menu">
                             <Location className="icon-nav" />
                             <span className="general-link-text">
-                                Адрес <span className="sub-text-link">Узнать</span>
+                                {t('hero.buttons.b4.title')}
+                                <span className="sub-text-link">
+                                    {t('hero.buttons.b4.subTitle')}
+                                </span>
                             </span>
                         </div>
                     </Link>

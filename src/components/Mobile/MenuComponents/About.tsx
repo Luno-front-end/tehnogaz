@@ -1,21 +1,21 @@
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const About: FC = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="work-time-container">
             <div className="fixed-container-about">
                 <div className="about-menu">
                     <div className="wrapper-about">
                         <p className="text-about">
-                            Компания «<span className="comp-text-about">ТЕХНОГАЗТОРГ</span>»
-                            основана в 2015 году. МЫ - молодая, динамично развивающаяся компания по
-                            продаже газов по договорным ценам, а именно: углекислоты, смесь МИКС-1,
-                            аргон, азот, кислород. Наша компания предоставляет стабильное и
-                            безопасное обслуживание своих клиентов по продаже, заправке баллонов и
-                            доставке их по Киеву, так же возможен самовывоз по адресу ул.
-                            Бориспольская 15. Технологии используемые нами - являются одними из
-                            самых современных на рынке и при условии самовывоза, наши специалисты
-                            помогут Вам с погрузкой.
+                            {t('sectionThree.information.mobileVariant.firstText')} «
+                            <span className="comp-text-about">{t('sectionThree.header.comp')}</span>
+                            » {t('sectionThree.information.mobileVariant.lastText')}
+                            {t('sectionThree.information.textTwo')}
+                            {t('sectionThree.information.textThree')}
+                            {t('sectionThree.information.textFour')}
                         </p>
                     </div>
                 </div>

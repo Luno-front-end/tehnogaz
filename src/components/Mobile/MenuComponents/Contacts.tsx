@@ -1,8 +1,11 @@
 import { FC } from 'react';
 
 import { Phone, Email } from '../../Svg';
+import { useTranslation } from 'react-i18next';
 
 const Contacts: FC = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="work-time-container">
             <div className="work-time">
@@ -22,7 +25,9 @@ const Contacts: FC = () => {
                                     </a>
                                 </li>
                             </ul>
-                            <p className="info-contacts-menu">Номер телефона</p>
+                            <p className="info-contacts-menu">
+                                {t('hero.buttons.contacts.number')}
+                            </p>
                         </div>
                         <div className="box-contacts-menu">
                             <Email className="email-menu-card" />
@@ -36,7 +41,7 @@ const Contacts: FC = () => {
                                     </a>
                                 </li>
                             </ul>
-                            <p className="info-contacts-menu">Почтовый адрес</p>
+                            <p className="info-contacts-menu">{t('hero.buttons.contacts.mail')}</p>
                         </div>
                     </div>
                 </div>

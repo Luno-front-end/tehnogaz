@@ -1,26 +1,20 @@
 import { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Company: FC = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="wrapper-text-company">
             <h2 className="header-company">
-                ТОВ <span className="subHeader-company">“ТЕХНОГАЗТОРГ”</span>
+                {t('sectionThree.header.tov')}{' '}
+                <span className="subHeader-company">“{t('sectionThree.header.comp')}”</span>
             </h2>
             <p className="text-sec-company">
-                <span> Компания «ТЕХНОГАЗТОРГ» основана в 2015 году.</span>
-                <span>
-                    МЫ - молодая, динамично развивающаяся компания по продаже газов по договорным
-                    ценам, а именно: углекислоты, смесь МИКС-1, аргон, азот, кислород.
-                </span>
-                <span>
-                    Наша компания предоставляет стабильное и безопасное обслуживание своих клиентов
-                    по продаже, заправке баллонов и доставке их по Киеву, так же возможен самовывоз
-                    по адресу ул. Бориспольская 15.
-                </span>
-                <span>
-                    Технологии используемые нами - являются одними из самых современных на рынке и
-                    при условии самовывоза, наши специалисты помогут Вам с погрузкой.
-                </span>
+                <span> {t('sectionThree.information.textOne')}</span>
+                <span>{t('sectionThree.information.textTwo')}</span>
+                <span>{t('sectionThree.information.textThree')}</span>
+                <span>{t('sectionThree.information.textFour')}</span>
             </p>
         </div>
     );

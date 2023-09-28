@@ -1,0 +1,77 @@
+{
+    "hero": {
+        "header": { "header": "NATURAL GAS", "name": "Tehnogaztorg" },
+        "buttons": {
+            "b1": { "title": "Working hours", "subTitle": "Find Out" },
+            "b2": { "title": "Info about us", "subTitle": "Find Out" },
+            "b3": { "title": "Contacts", "subTitle": "Find Out" },
+            "b4": { "title": "Address", "subTitle": "Find Out" },
+            "work": { "first": "Mon-Fri", "last": "Sat" },
+            "contacts": { "number": "Phone number", "mail": "Email" }
+        }
+    },
+    "sectionOne": {
+        "header": { "header": "ORDERS ONLY BY PHONE", "name": "Contractual prices" },
+        "slider": {
+            "slides": [
+                {
+                    "name": "Carbon dioxide",
+                    "type": "Cylinder",
+                    "text": "Carbon dioxide (Carbon dioxide gas DSTU 4817:2007). Carbon dioxide gas is color-free and odorless, slightly toxic, has a specific slightly acidic taste. Non-combustible, does not support combustion, 1.5 times heavier than air, dissolves well in water, forming CO. The boiling point is -78.3°C. Various properties of carbon dioxide are used in industry. In the food industry, CO2 is used for freezing, storage and acid control, for carbonation beverages. In the chemical industry to control the acidity of water. Carbon dioxide is also used to weld metals as a protective gas to stimulate plant growth in the greenhouse."
+                },
+                {
+                    "name": "Mix MIX-1",
+                    "type": "Cylinder",
+                    "text": "Welding Blend CORGON 18 MIX-1. Protective gas for electric welding. The most optimal for welding in a protective gas environment is the use of argon-based welding mixtures with additives of gas components such as carbon dioxide, oxygen, hydrogen, helium, nitrogen, etc. Due to the correctly selected and high-quality welding mixtures their use increases: the reliability of welded joints, the performance of welding operations, facilitates auxiliary and post-welding operations (cleaning, removal of residual deformations, preparation for painting, etc.), reduced marriage, also leads to lower production costs."
+                },
+                {
+                    "name": "Argon",
+                    "type": "Cylinder",
+                    "text": "Argon gas GOST 10157-79. Non-toxic gas without taste, color and smell, heavier than air, poorly soluble in water. The atmosphere contains 0.93% argon. The boiling point of argon -186°C. In the industry argon is used in metallurgy, as a protective medium in welding, cutting of active and rare metals and alloys based on them aluminium, aluminum alloys, alloy steels of various grades, when refining metals in metallurgy and for filling gas discharge lamps. The use of argon makes it possible to optimize production processes such as mixing molten substances, blowing reactor pallets, etc."
+                },
+                {
+                    "name": "Nitrogen",
+                    "type": "Cylinder",
+                    "text": "Nitrogen gaseous technical grade 1. Non-combustible gas, without taste, color and smell, unfit for breathing, poorly soluble in water. The atmosphere contains 78.1% nitrogen. The boiling point of nitrogen is -196°C. This gas has many commercial and technical applications. Liquid nitrogen is used to freeze food, donated blood, etc. Liquid nitrogen is also used to modify the properties of metals, control the temperature of chemical reactions, in cosmetology and medicine. Gaseous nitrogen is used in metallurgy to protect, coat or stir metals, in the food industry to create an inert atmosphere for storing food."
+                },
+                {
+                    "name": "Oxygen",
+                    "type": "Cylinder",
+                    "text": "Oxygen (technical gaseous DSTU GOST 5583:2009). Oxygen-gas without color, taste and smell, supports life and combustion. In reaction with other chemical elements forms oxides. Heavier air, slightly soluble in water. The atmosphere contains 21% oxygen. Oxygen boiling point -183°C. The main uses of oxygen are based on its burning and life-sustaining properties. Oxygen is widely used as a combustible gas in smelters, for firing, for welding and cutting metals. In the chemical industry, oxygen is used as a raw material, in paper - as a bleaching agent. In medicine, oxygen is widely used for patient support and oxygen therapy."
+                }
+            ],
+            "button": {
+                "text": { "firstName": "Order", "lastName": "By phone" },
+                "capacity": { "cName": "l", "cText": "Volume" },
+                "weight": { "wName": "cg", "wText": "Cylinder weight" }
+            }
+        }
+    },
+    "sectionTwo": {
+        "header": { "header": "ABOUT US", "name": "About Company and Services" }
+    },
+    "sectionThree": {
+        "header": { "tov": "LLC", "comp": "TEHNOGAZTORG" },
+        "information": {
+            "textOne": "The company «TEHNOGAZTORG» was founded in 2015.",
+            "mobileVariant": { "firstText": "The company", "lastText": "was founded in 2015." },
+            "textTwo": "WE — are a young, dynamically developing company selling gases at negotiated prices, namely, carbon dioxide, MIX-1, argon, nitrogen, oxygen.",
+            "textThree": "Our company provides stable and safe service of its customers on sale, refueling of cylinders and their delivery in Kiev, as possible self-export to the street Boryspilska 15.",
+            "textFour": "The technologies we use is one of the most modern on the market and, provided that you are able to export it, our specialists will help you with loading."
+        }
+    },
+    "footer": {
+        "address": { "name": "Address", "where": "Street Boryspilska 15, Kyiv, Ukraine" },
+        "contacts": "Contacts",
+        "comp": "TEHNOGAZTORG",
+        "work": { "first": "Mon-Fri", "last": "Sat" }
+    },
+    "mobileInfoCard": {
+        "menu": { "backBtn": "Back", "aboutUs": "Information about us" },
+        "infoContact": { "firstText": "Order only", "lastText": "by phone" },
+        "aboutProduct": {
+            "weight": { "wText": "Filled cylinder weight" }
+        },
+        "more": "Tap to learn more"
+    }
+}

@@ -6,7 +6,6 @@ const Logo: FC = () => {
         <div className="logo-container">
             <a href="#">
                 <LogoSvg className="logo" />
-                {/* <img src={Logo} alt=""  /> */}
             </a>
         </div>
     );

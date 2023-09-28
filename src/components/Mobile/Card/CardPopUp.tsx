@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import infoCard from '../../../infoCardPopUpUA.json';
 import { Cloud } from '../../Svg';
+import { useTranslation } from 'react-i18next';
 
 interface ICardPopUpProps {
     active: boolean;
@@ -10,6 +11,9 @@ interface ICardPopUpProps {
 
 const CardPopUp: FC<ICardPopUpProps> = ({ active, ind, openCloseCard }) => {
     const numberType = Number(ind);
+
+    const { t } = useTranslation();
+
     const variantRenderCloud = () => {
         if (infoCard[numberType]?.valueTwo) {
             return (
@@ -53,8 +57,12 @@ const CardPopUp: FC<ICardPopUpProps> = ({ active, ind, openCloseCard }) => {
             onClick={openCloseCard}
         >
             <div className="wrapper-popup-card">
-                <h2 className="head-popup-card">{infoCard[numberType]?.header}</h2>
-                <p className="text-popup-card">{infoCard[numberType]?.text}</p>
+                <h2 className="head-popup-card">
+                    {t(`sectionOne.slider.slides.${numberType}.name`)}
+                </h2>
+                <p className="text-popup-card">
+                    {t(`sectionOne.slider.slides.${numberType}.text`)}
+                </p>
                 <div className="doubleValue">{variantRenderCloud()}</div>
             </div>
         </div>
