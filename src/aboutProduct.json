@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "value": "40/10",
+        "capacity": "85/21",
+        "price": "350 / 150"
+    },
+    {
+        "id": "2",
+        "value": "40",
+        "capacity": "70",
+        "price": "900"
+    },
+    {
+        "id": "3",
+        "value": "40",
+        "capacity": "70",
+        "price": "900"
+    },
+    {
+        "id": "4",
+        "value": "40",
+        "capacity": "70",
+        "price": "350"
+    },
+    {
+        "id": "5",
+        "value": "40",
+        "capacity": "70",
+        "price": "300"
+    }
+]
