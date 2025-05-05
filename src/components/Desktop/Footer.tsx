@@ -40,10 +40,6 @@ const Footer: FC = () => {
                     <p className="work-text-day">{t('footer.work.first')}</p>
                     <p className="work-text-hour">8:00-17:00</p>
                 </li>
-                <li className="work-footer-item">
-                    <p className="work-text-day">{t('footer.work.last')}</p>
-                    <p className="work-text-hour">9:00-15:00</p>
-                </li>
             </ul>
         </div>
     );

@@ -37,13 +37,6 @@ const Menu: FC = () => {
                                 <p className="hour-menu-work-desk">8:00-17:00</p>
                             </div>
                         </li>
-                        <li className="absolute-info-link-item">
-                            <WorkSat className="workSat-iconTab" />
-                            <div className="wrapper-menu-work">
-                                <p className="days-menu-work-desk">{t('hero.buttons.work.last')}</p>
-                                <p className="hour-menu-work-desk">9:00-15:00</p>
-                            </div>
-                        </li>
                     </ul>
                     <Link to="/" className="link-item-nav" onClick={() => onOpenItems('work')}>
                         <div className="wrapper-content-link-menu">

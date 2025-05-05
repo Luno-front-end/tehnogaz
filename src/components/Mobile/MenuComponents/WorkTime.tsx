@@ -19,15 +19,6 @@ const WorkTime: FC = () => {
                             </div>
                         </div>
                     </li>
-                    <li className="work-time-item">
-                        <div className="work-time-wrapper">
-                            <WorkSat className="workSvg" />
-                            <div className="work-time-info">
-                                <h2 className="work-time-day">{t('hero.buttons.work.last')}</h2>
-                                <p className="work-time-hours">9:00-15:00</p>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
