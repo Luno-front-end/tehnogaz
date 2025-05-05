@@ -10,7 +10,9 @@ const Footer: FC = () => {
             <div>
                 <h2 className="street-head">{t('footer.address.name')}</h2>
                 <p className="street-text">{t('footer.address.where')}</p>
-                <p className="copyright">© 2022 {t('footer.comp')}</p>
+                <p className="copyright">
+                    © {new Date().getFullYear()} {t('footer.comp')}
+                </p>
             </div>
             <div className="wrapper-contacts-footer">
                 <h3 className="head-contacts-footer">{t('footer.contacts')}</h3>
